@@ -1,0 +1,5 @@
+# TESTPHASE - beim echten Livegang ersetzen durch:
+# User-agent: *
+# Allow: /
+User-agent: *
+Disallow: /

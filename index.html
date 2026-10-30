@@ -6,10 +6,10 @@
 <title>Ulrike Wyen Interior · Innenarchitektin in Köln</title>
 <meta name="description" content="Ulrike Wyen - Innenarchitektin in Köln. Individuelle Konzepte für Arztpraxen, Büros, Küchen, Wohnräume und Cafés, von der Beratung bis zur Umsetzung.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='168.7%208%2038.7%2051.5'%3E%3Cpath%20d='M%20168.726562%208%20L%20168.726562%2030.1875%20C%20168.726562%2030.226562%20168.734375%2030.265625%20168.75%2030.300781%20L%20173.007812%2042.027344%20C%20173.078125%2042.203125%20173.222656%2042.210938%20173.289062%2042.21875%20C%20173.355469%2042.21875%20173.492188%2042.199219%20173.566406%2042.046875%20L%20187.042969%2014.027344%20C%20187.226562%2013.648438%20187.605469%2013.410156%20188.039062%2013.410156%20L%20188.042969%2013.410156%20C%20188.472656%2013.410156%20188.851562%2013.644531%20189.035156%2014.027344%20L%20202.667969%2042.054688%20C%20202.746094%2042.214844%20202.882812%2042.230469%20202.953125%2042.226562%20C%20203.011719%2042.222656%20203.160156%2042.199219%20203.226562%2042.035156%20L%20207.398438%2030.464844%20C%20207.414062%2030.429688%20207.421875%2030.390625%20207.421875%2030.355469%20L%20207.421875%208%20Z%20M%20168.726562%208'%20fill='%2371b32c'/%3E%3Cpath%20d='M%20202.957031%2047.28125%20L%20202.914062%2047.28125%20C%20202.484375%2047.28125%20202.105469%2047.050781%20201.917969%2046.667969%20L%20188.308594%2022.996094%20C%20188.234375%2022.839844%20188.089844%2022.824219%20188.035156%2022.824219%20C%20188.019531%2022.820312%20187.832031%2022.839844%20187.757812%2022.996094%20L%20174.296875%2046.644531%20C%20174.105469%2047.042969%20173.714844%2047.289062%20173.261719%2047.265625%20C%20172.816406%2047.25%20172.433594%2046.984375%20172.269531%2046.578125%20L%20168.726562%2037.691406%20L%20168.726562%2040.898438%20C%20168.726562%2051.316406%20174.742188%2059.472656%20188.035156%2059.472656%20C%20201.25%2059.472656%20207.421875%2050.253906%20207.421875%2040.898438%20L%20207.421875%2038.910156%20L%20203.945312%2046.59375%20C%20203.78125%2047%20203.402344%2047.265625%20202.957031%2047.28125'%20fill='%23222918'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/poppins-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script src="gate.js"></script>
 <link rel="stylesheet" href="styles.css">
+<link rel="preload" href="assets/img/kueche_clouth.jpg" as="image">
 </head>
 <body>
 
@@ -26,8 +26,8 @@
   </a>
   <button class="nav-toggle" type="button" aria-label="Menü" aria-expanded="false"><span></span><span></span><span></span></button>
   <ul>
-    <li><a href="#projekte">Projekte</a></li>
-    <li><a href="#ueber-mich">Über mich</a></li>
+    <li><a href='/projekte'>Projekte</a></li>
+    <li><a href="#ueber-mich-voll">Über mich</a></li>
     <li><a href="#leistungen">Leistungen</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#kontakt">Kontakt</a></li>
@@ -39,74 +39,120 @@
   <div class="hero-slide" id="heroB"><div class="zoom-layer"></div></div>
   <div class="hero-content">
     <span class="eyebrow">Innenarchitektur · Köln</span>
-    <h1>Räume, die Ihre Geschichte <em>erzählen</em>.<br>Jedes Projekt ist ein Unikat.</h1>
+    <h1>Gestaltung für Ihr<br><em>Wohlbefinden</em> im Raum</h1>
     <a class="hero-cta" href="#kontakt">Erstgespräch vereinbaren <span class="arrow">→</span></a>
   </div>
 </section>
 
 <section class="about-teaser" id="ueber-mich">
-  <div class="photo"><img src="assets/img/portrait.jpg" alt="Ulrike Wyen"></div>
-  <div>
+  <div class="photo"><img src="assets/img/portrait_freigestellt.webp" alt="Ulrike Wyen am Zeichentisch" width="1065" height="1103" decoding="async"></div>
+  <div class="about-text">
     <span class="eyebrow">Über mich</span>
-    <h2>Seit über 20 Jahren gestalte ich Räume, die Geschichten erzählen.</h2>
-    <p>Von der Arztpraxis bis zur Maisonette-Wohnung - jedes Projekt ist für mich ein Unikat, das bis ins Detail auf die Menschen abgestimmt wird, die darin leben und arbeiten.</p>
-    <a class="more" href="#ueber-mich-voll">Mehr über mich &amp; meinen Werdegang <span class="arrow">→</span></a>
+    <p>Ich bin Ulrike Wyen, Innenarchitektin in Köln.<br>Seit über 20 Jahren plane ich Praxen, Büros, Küchen und Wohnräume.</p>
+    <a class="more" href="#ueber-mich-voll">Mehr über mich &amp; meinen Werdegang <span class="arrow">&rarr;</span></a>
   </div>
 </section>
 
 <section class="projekte-demo" id="projekte">
   <div class="section-head">
     <h2>Projekte</h2>
+    <p>Private Wohnräume und gewerbliche Flächen. Seitlich durchblättern, jedes Projekt führt zur vollständigen Bildstrecke.</p>
   </div>
-  <div class="proj-grid">
-    <a class="proj-card" href="#proj-clouth">
-      <div class="thumb"><img src="assets/img/kueche_clouth.jpg" alt="Maisonette im Fabrikareal"></div>
-      <div class="meta"><h3>Maisonette im Fabrikareal</h3><p>Köln - Nussbaum, Naturstein, Industriecharakter</p></div>
-    </a>
-    <a class="proj-card" href="#proj-schoser">
-      <div class="thumb"><img src="assets/img/wohnen_schoser.jpg" alt="Wohnzimmer"></div>
-      <div class="meta"><h3>Wohnzimmer mit Essbereich</h3><p>Köln - Familienwohnung</p></div>
-    </a>
-    <a class="proj-card" href="#proj-feldmann">
-      <div class="thumb"><img src="assets/img/arzt_feldmann.jpg" alt="Kardiologie"></div>
-      <div class="meta"><h3>Kardiologische Praxis</h3><p>Köln - Blau, Beige &amp; Nussbaum</p></div>
-    </a>
-    <a class="proj-card" href="#proj-ifd">
-      <div class="thumb"><img src="assets/img/buero_ifd.jpg" alt="Empfang"></div>
-      <div class="meta"><h3>Empfangsbereich IfD</h3><p>Empore, Treppe, Glasfronten</p></div>
-    </a>
-    <a class="proj-card" href="#proj-td-buero">
-      <div class="thumb"><img src="assets/img/buero_td.jpg" alt="Bürofläche"></div>
-      <div class="meta"><h3>Bürofläche</h3><p>USM-Möbel, Arbeitsinseln</p></div>
-    </a>
-    <a class="proj-card" href="#proj-popup">
-      <div class="thumb"><img src="assets/img/buero_popup.jpg" alt="Pop-up Store"></div>
-      <div class="meta"><h3>Pop-up Store</h3><p>50er-Jahre-Architektur, Vinyl-Shop</p></div>
-    </a>
-    <a class="proj-card" href="#proj-neuro">
-      <div class="thumb"><img src="assets/img/arzt_neuro.jpg" alt="Neurologie"></div>
-      <div class="meta"><h3>Neurologische Praxis</h3><p>Köln - Akustik &amp; Eichenoptik</p></div>
-    </a>
-    <a class="proj-card" href="#proj-pae">
-      <div class="thumb"><img src="assets/img/arzt_pae.jpg" alt="Internistische Praxis"></div>
-      <div class="meta"><h3>Praxisgemeinschaft</h3><p>Köln-Ebertplatz - Grün</p></div>
-    </a>
-    <a class="proj-card" href="#proj-derma">
-      <div class="thumb"><img src="assets/img/derma_01.jpg" alt="Dermatologie"></div>
-      <div class="meta"><h3>Dermatologie</h3><p>Neuss - Klares Weiß-Design</p></div>
-    </a>
-    <a class="proj-card" href="#proj-physio">
-      <div class="thumb"><img src="assets/img/physio_01.jpg" alt="Physiotherapie"></div>
-      <div class="meta"><h3>Physiotherapie</h3><p>Neuss - Holz &amp; Pastellgrün</p></div>
-    </a>
-    <a class="proj-card" href="#proj-poggy">
-      <div class="thumb"><img src="assets/img/kueche_poggy.jpg" alt="Küche Poggy"></div>
-      <div class="meta"><h3>Private Küche</h3><p>Köln - Sitzkoje &amp; Bora</p></div>
-    </a>
-    <a class="proj-card" href="#proj-gastro">
-      <div class="thumb"><img src="assets/img/cafe_gastro.jpg" alt="Gastronomie &amp; Kinderschminkecke"></div>
-      <div class="meta"><h3>Gastronomie &amp; Kinderschminkecke</h3><p>Bergisch Gladbach - Indoor-Spielplatz</p></div>
-    </a>
+
+    <div class="proj-group">
+      <div class="group-label">Privat</div>
+      <div class="proj-rail">
+      <button class="rail-nav prev" type="button" aria-label="Zurück">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8 10 12.5"/></svg>
+      </button>
+      <button class="rail-nav next" type="button" aria-label="Weiter">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+      </button>
+        <div class="rail-track">
+        <a class='proj-card' href='/projekte#proj-clouth'>
+      <div class="thumb"><img src="assets/img/kueche_clouth.jpg" alt="Maisonette im Fabrikareal" width="1400" height="933" decoding="async"></div>
+      <div class="meta"><h3>Maisonette im Fabrikareal</h3><p>Köln - Nussbaum, Naturstein, Industriecharakter</p></div></a>
+        <a class='proj-card' href='/projekte#proj-schoser'>
+      <div class="thumb"><img src="assets/img/wohnen_schoser.jpg" alt="Wohnzimmer" width="1400" height="933" decoding="async"></div>
+      <div class="meta"><h3>Wohnzimmer mit Essbereich</h3><p>Köln - Familienwohnung</p></div></a>
+        <a class='proj-card' href='/projekte#proj-poggy'>
+      <div class="thumb"><img src="assets/img/kueche_poggy.jpg" alt="Küche Poggy" width="1400" height="933" decoding="async"></div>
+      <div class="meta"><h3>Private Küche</h3><p>Köln - Sitzkoje &amp; Bora</p></div></a>
+        <a class='proj-card' href='/projekte#proj-tm-kueche'>
+      <div class="thumb"><img src="assets/img/tm_kueche_01.jpg" alt="Küche in Grüntönen" width="1400" height="997" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Küche in Grüntönen</h3><p>Köln - Corian, Eiche, Bora</p></div></a>
+        <a class='proj-card' href='/projekte#proj-kueche-wyen'>
+      <div class="thumb"><img src="assets/img/kueche_wyen_01.jpg" alt="Offene Wohnküche" width="1400" height="947" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Offene Wohnküche</h3><p>Rosa, Corian, Messing</p></div></a>
+        <a class='proj-card' href='/projekte#proj-boogen-wz'>
+      <div class="thumb"><img src="assets/img/boogen_wz_01.jpg" alt="Wohn- und Esszimmer" width="1400" height="934" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Wohn- und Esszimmer</h3><p>Eiche, Gaskamin, Wandvertäfelung</p></div></a>
+        <a class='proj-card' href='/projekte#proj-boogen-flur'>
+      <div class="thumb"><img src="assets/img/boogen_flur_01.jpg" alt="Flur und Garderobe" width="1400" height="934" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Flur und Garderobe</h3><p>Pegboard, Eiche, Sideboard</p></div></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="proj-group">
+      <div class="group-label">Gewerblich</div>
+      <div class="proj-rail">
+      <button class="rail-nav prev" type="button" aria-label="Zurück">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8 10 12.5"/></svg>
+      </button>
+      <button class="rail-nav next" type="button" aria-label="Weiter">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+      </button>
+        <div class="rail-track">
+        <a class='proj-card' href='/projekte#proj-feldmann'>
+      <div class="thumb"><img src="assets/img/arzt_feldmann.jpg" alt="Kardiologie" width="1400" height="933" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Kardiologische Praxis</h3><p>Köln - Blau, Beige &amp; Nussbaum</p></div></a>
+        <a class='proj-card' href='/projekte#proj-neuro'>
+      <div class="thumb"><img src="assets/img/arzt_neuro.jpg" alt="Neurologie" width="1400" height="934" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Neurologische Praxis</h3><p>Köln - Akustik &amp; Eichenoptik</p></div></a>
+        <a class='proj-card' href='/projekte#proj-pae'>
+      <div class="thumb"><img src="assets/img/arzt_pae.jpg" alt="Internistische Praxis" width="1400" height="933" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Praxisgemeinschaft</h3><p>Köln-Ebertplatz - Grün</p></div></a>
+        <a class='proj-card' href='/projekte#proj-praxis-int'>
+      <div class="thumb"><img src="assets/img/praxis_int_01.jpg" alt="Internistische Praxis" width="1400" height="724" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Internistische Praxis</h3><p>Köln - Blau, Limette, Akustik</p></div></a>
+        <a class='proj-card' href='/projekte#proj-derma'>
+      <div class="thumb"><img src="assets/img/derma_01.jpg" alt="Dermatologie" width="1254" height="990" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Dermatologie</h3><p>Neuss - Klares Weiß-Design</p></div></a>
+        <a class='proj-card' href='/projekte#proj-physio'>
+      <div class="thumb"><img src="assets/img/physio_01.jpg" alt="Physiotherapie" width="1008" height="1320" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Physiotherapie</h3><p>Neuss - Holz &amp; Pastellgrün</p></div></a>
+        <a class='proj-card' href='/projekte#proj-ifd'>
+      <div class="thumb"><img src="assets/img/buero_ifd.jpg" alt="Empfang" width="1400" height="933" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Empfangsbereich IfD</h3><p>Empore, Treppe, Glasfronten</p></div></a>
+        <a class='proj-card' href='/projekte#proj-ifd-buero'>
+      <div class="thumb"><img src="assets/img/ifd_buero_01.jpg" alt="Büro, Küche und Saal (IfD)" width="1400" height="803" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Büro, Küche und Saal (IfD)</h3><p>Köln - Akustikvorhang, Büroküche</p></div></a>
+        <a class='proj-card' href='/projekte#proj-td-buero'>
+      <div class="thumb"><img src="assets/img/buero_td.jpg" alt="Bürofläche" width="1400" height="933" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Bürofläche</h3><p>USM-Möbel, Arbeitsinseln</p></div></a>
+        <a class='proj-card' href='/projekte#proj-popup'>
+      <div class="thumb"><img src="assets/img/buero_popup.jpg" alt="Pop-up Store" width="1400" height="933" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Pop-up Store</h3><p>50er-Jahre-Architektur, Vinyl-Shop</p></div></a>
+        <a class='proj-card' href='/projekte#proj-cafe-deinmein'>
+      <div class="thumb"><img src="assets/img/cafe_deinmein_01.jpg" alt="Café Dein&amp;Mein" width="1400" height="934" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Café Dein&amp;Mein</h3><p>Köln - Theke mit Rundung, Eiche</p></div></a>
+        <a class='proj-card' href='/projekte#proj-cafe-elefant'>
+      <div class="thumb"><img src="assets/img/cafe_elefant_01.jpg" alt="Café Elefant" width="1400" height="1114" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Café Elefant</h3><p>Köln - Grün, Rot, Marmor</p></div></a>
+        <a class='proj-card' href='/projekte#proj-gastro'>
+      <div class="thumb"><img src="assets/img/cafe_gastro.jpg" alt="Gastronomie &amp; Kinderschminkecke" width="1400" height="1154" decoding="async" loading="lazy"></div>
+      <div class="meta"><h3>Gastronomie &amp; Kinderschminkecke</h3><p>Bergisch Gladbach - Indoor-Spielplatz</p></div></a>
+        </div>
+      </div>
+    </div>
+
+  <div class="projekte-more">
+    <a href='/projekte'>Alle Projekte ansehen <span class="arrow">&rarr;</span></a>
+  </div>
+
+  <div class="projekte-note">
+    <p>Über die Jahre sind außerdem Ferienhäuser, Hotels, Retail Stores, Cafés und Restaurants dazugekommen.</p>
   </div>
 </section>
 
@@ -154,7 +200,7 @@
   </div>
 
   <div class="um-grid">
-    <div class="photo"><img src="assets/img/portrait.jpg" alt="Ulrike Wyen"></div>
+    <div class="photo"><img src="assets/img/portrait.jpg" alt="Ulrike Wyen" width="1100" height="1497" decoding="async" loading="lazy"></div>
     <div class="um-facts">
       <div class="fact">
         <h4>Bisherige Tätigkeitsfelder</h4>
@@ -187,403 +233,56 @@
   </div>
 </section>
 
-<section class="projektseite" id="proj-clouth">
-  <div class="section-head" style="max-width:1100px; padding:0 0 32px;">
-    <h2>Projekte im Detail</h2>
-  </div>
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Maisonette im Fabrikareal</h1>
-    <div class="loc">Köln</div>
-    <div class="rt"><p>In einem alten Fabrikareal wurden neue Wohngebäude errichtet. Alle Bereiche dieser Maisonette-Wohnung - von der Küche über Flur, Bäder und Schlafzimmer bis zum Arbeitszimmer - wurden ganzheitlich auf den genius loci und die individuellen Bedürfnisse der Bauherren abgestimmt. Ein rückenschonender Boden aus gummiartiger, fugenloser Masse bewahrt den Industriecharakter durch die ganze Wohnung. Die großzügige Küche mit angeschlossenem Essbereich wurde in Nussbaum, Naturstein und Feinsteinzeug gefertigt, die klare Struktur der Fronten ist zugleich Griffleiste. Schlafzimmer, Bäder, WC und Arbeitszimmer sind über mutige Tapeten - Weltkarte, Fornasetti, floral - und eigene Farbkonzepte individuell gestaltet.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/kclouth_01.jpg" alt="Küche, Gesamtansicht"></div>
-    <div class="row half">
-      <img src="assets/img/kclouth_06.jpg" alt="Küche mit Treppe">
-      <img src="assets/img/kclouth_02.jpg" alt="Küche, zweite Perspektive">
-    </div>
-    <div class="row half">
-      <img src="assets/img/kclouth_08.jpg" alt="Griffleiste, Detail">
-      <img src="assets/img/clouth_flur06.jpg" alt="Flur, Industrieglastür">
-    </div>
-    <div class="row full"><img src="assets/img/clouth_arbeit13.jpg" alt="Arbeitszimmer, Senfgelber Samtvorhang"></div>
-    <div class="row half">
-      <img src="assets/img/clouth_schlaf09.jpg" alt="Schlafzimmer, Blumentapete">
-      <img src="assets/img/clouth_bad16.jpg" alt="Bad, Weltkarten-Tapete">
-    </div>
-    <div class="row half">
-      <img src="assets/img/clouth_bad18.jpg" alt="Bad, Fornasetti-Tapete">
-      <img src="assets/img/clouth_wc20.jpg" alt="WC, Fornasetti-Tapete">
-    </div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Köln</dd>
-      <dt>Material</dt><dd>Nussbaum, Naturstein, Feinsteinzeug, Industrieboden, mutige Tapeten</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-      <dt>Einbauten</dt><dd>Bbene</dd>
-      <dt>Fotos</dt><dd>Sebastian Meyer</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-schoser">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Wohnzimmer mit Essbereich</h1>
-    <div class="loc">Köln</div>
-    <div class="rt"><p>Gestaltung eines Wohnzimmers für eine vierköpfige Familie: Bereiche, die eigenständig sind und doch im gestalterischen Dialog zueinander stehen - realisiert über ein stimmiges Farbkonzept aus Einbaumöbeln, Textilien, Wandgestaltung und Beleuchtung. Die Waldtapete schafft eine Nische im Esstischbereich, ergänzt durch eine gemütliche Leseecke mit Sitzbank-Sofa.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/schoser_01.jpg" alt="Essbereich mit Waldtapete"></div>
-    <div class="row half">
-      <img src="assets/img/schoser_04.jpg" alt="Einbauregal, Petrol &amp; Grün">
-      <img src="assets/img/schoser_02.jpg" alt="Esstisch, Detail">
-    </div>
-    <div class="row full"><img src="assets/img/schoser_05.jpg" alt="Leseecke mit Klavier"></div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Köln</dd>
-      <dt>Material</dt><dd>Waldtapete, Textilien</dd>
-      <dt>Farbkonzept</dt><dd>Petrol, Altrosa, Grün</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-      <dt>Einbauten</dt><dd>Bbene</dd>
-      <dt>Fotos</dt><dd>Sebastian Meyer</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-feldmann">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Kardiologische Praxis</h1>
-    <div class="loc">Köln</div>
-    <div class="rt"><p>Für eine bestehende kardiologische Praxis in Köln wurde ein ganzheitliches neues Konzept geschaffen, welches stufenweise verwirklicht werden soll. Erster Umbauteil war der EKG-Raum sowie ein Besprechungszimmer. Intensives Blau in Kombination mit Beige und Nussbaum stellt die farbliche Gestaltungsgrundlage dar.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/arzt_feldmann.jpg" alt="EKG-Raum, Blau"></div>
-    <div class="row half">
-      <img src="assets/img/feldmann_inpetto.jpg" alt="Besprechungsraum, Beige/Nussbaum">
-      <img src="assets/img/feldmann_g02.jpg" alt="EKG-Raum, zweite Perspektive">
-    </div>
-    <div class="row half">
-      <img src="assets/img/feldmann_g04.jpg" alt="Küchenzeile, Corian, Detail">
-      <img src="assets/img/feldmann_g05.jpg" alt="Beige Wandgestaltung, Muuto Dots">
-    </div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Köln</dd>
-      <dt>Material</dt><dd>Nussbaum, Corian, Muuto Möbel</dd>
-      <dt>Farbkonzept</dt><dd>Blau, Beige, Nussbaum</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-      <dt>Fotos</dt><dd>Sebastian Meyer</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-ifd">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Empfangsbereich IfD</h1>
-    <div class="loc">Köln</div>
-    <div class="rt"><p>Der Empfangsbereich einer Firma, die sich mit den Belangen von Menschen mit verschiedensten Einschränkungen beschäftigt, wurde unter besonderer Berücksichtigung von Akustik, Beleuchtung und Klarheit neu strukturiert. Der hohe Raum mit Empore und zweiseitigen Glasfronten sowie einer offenen, geschwungenen Treppe stellte eine besondere Herausforderung dar.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/ifd_04.jpg" alt="Empfangstheke, Treppe &amp; Empore"></div>
-    <div class="row half">
-      <img src="assets/img/ifd_01.jpg" alt="Empfangstheke, Glaswand">
-      <img src="assets/img/ifd_02.jpg" alt="Empfangstheke, Empore">
-    </div>
-    <div class="row full"><img src="assets/img/ifd_08.jpg" alt="Wartebereich, hoher Raum"></div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Köln</dd>
-      <dt>Material</dt><dd>Holzlamellen-Decke, Glas, geschwungene Treppe</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-      <dt>Einbauten</dt><dd>Gutjahr</dd>
-      <dt>Fotos</dt><dd>Sebastian Meyer</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-td-buero">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Bürofläche</h1>
-    <div class="loc">Köln</div>
-    <div class="rt"><p>Eine vorhandene Bürofläche sollte für mehr Mitarbeitende umgestaltet werden. Die vorhandenen hochwertigen Büromöbel wurden umsortiert und mit speziell angefertigten Elementen ergänzt, die nun gleichmäßige Arbeitsinseln darstellen - mit Ruhezonen durch verschiedene Höhen und integrierte Bepflanzung.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/tdbuero_01.jpg" alt="Doppelschreibtisch, USM"></div>
-    <div class="row half">
-      <img src="assets/img/tdbuero_02.jpg" alt="Doppelschreibtisch, Mittelstück">
-      <img src="assets/img/tdbuero_04.jpg" alt="Doppelschreibtisch, Mittelstück-Detail">
-    </div>
-    <div class="row half">
-      <img src="assets/img/tdbuero_03.jpg" alt="Pflanzschale, Organizer-Detail">
-      <img src="assets/img/tdbuero_05.jpg" alt="Raumteiler mit Pflanze">
-    </div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Köln</dd>
-      <dt>Material</dt><dd>USM Haller-Möbel</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-      <dt>Einbauten</dt><dd>Gutjahr</dd>
-      <dt>Fotos</dt><dd>Sebastian Meyer</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-popup">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Pop-up Store</h1>
-    <div class="loc">Köln</div>
-    <div class="rt"><p>Eine zweigeschossige Architektur aus den 50er-Jahren bot den Rahmen für eine zeitlich befristete, kombinierte Büro- und Event-Fläche. Die offene Fläche im Erdgeschoss dient als Verkaufsfläche für Games &amp; Vinyl-Platten und kann kurzfristig für Events wie Konzerte oder Shootings genutzt werden.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/popup_01.jpg" alt="Verkaufsfläche mit Empore"></div>
-    <div class="row half">
-      <img src="assets/img/popup_02.jpg" alt="Blick von der Empore">
-      <img src="assets/img/popup_05.jpg" alt="Verkaufsraum">
-    </div>
-    <div class="row full"><img src="assets/img/popup_03.jpg" alt="Fensterfront"></div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Köln</dd>
-      <dt>Material</dt><dd>50er-Jahre-Architektur, Rollmöbel, Paletten</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-      <dt>Fotos</dt><dd>Sebastian Meyer</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-neuro">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Neurologische Praxis</h1>
-    <div class="loc">Köln</div>
-    <div class="rt"><p>Eine bestehende Arztpraxis wurde mit möglichst geringem Aufwand in Teilbereichen modernisiert. Die ganze Praxis erhielt einen einheitlichen Boden in warmer Eichenoptik. Wartezimmer und Arztzimmer wurden umgestaltet und ergänzt, mit besonderem Augenmerk auf die Verbesserung von Akustik und Beleuchtung. Die speziell gestalteten Garderoben dienen zugleich als Akustikelement, die Beleuchtung wurde mit Decken-Akustik-Paneelen kombiniert.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/neuro_01.jpg" alt="Arztzimmer, Eichenoptik"></div>
-    <div class="row half">
-      <img src="assets/img/neuro_02.jpg" alt="Arztzimmer, zweite Perspektive">
-      <img src="assets/img/neuro_03.jpg" alt="Garderobe, Akustikelement">
-    </div>
-    <div class="row full"><img src="assets/img/neuro_04.jpg" alt="Wartezimmer, Wandvertäfelung"></div>
-    <div class="row half">
-      <img src="assets/img/neuro_05.jpg" alt="Garderobe mit Akustik-Pinnwand">
-      <img src="assets/img/neuro_06.jpg" alt="Arztzimmer, Akustikdecke &amp; Kassettendecke">
-    </div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Köln</dd>
-      <dt>Material</dt><dd>Eichenoptik, Akustikpaneele, USM-Möbel, Fenix</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-      <dt>Einbauten</dt><dd>Gutjahr</dd>
-      <dt>Kunst</dt><dd>Minrath</dd>
-      <dt>Fotos</dt><dd>Sebastian Meyer</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-pae">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Praxisgemeinschaft</h1>
-    <div class="loc">Köln-Ebertplatz</div>
-    <div class="rt"><p>Maßgeschneiderte Gestaltung der neuen Räumlichkeiten für eine Praxisgemeinschaft in Köln - eine innenarchitektonische Planung, die den unterschiedlichen Ansprüchen der Ärztinnen und Ärzte, Disziplinen und Patienten entspricht. Dafür wurde das Mobiliar speziell entworfen und alle Räume verschiedenfarbig gestaltet.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/pae_002.jpg" alt="Empfangstheke, Grün"></div>
-    <div class="row half">
-      <img src="assets/img/pae_001.jpg" alt="Empfangstheke, zweite Perspektive">
-      <img src="assets/img/pae_007.jpg" alt="Flur, grün">
-    </div>
-    <div class="row half">
-      <img src="assets/img/pae_008.jpg" alt="Flur, WC-Bereich">
-      <img src="assets/img/pae_015.jpg" alt="Wartebereich, Eames-Klassiker">
-    </div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Köln-Ebertplatz</dd>
-      <dt>Material</dt><dd>Individuelle Raumfarben, Eames-Klassiker</dd>
-      <dt>Farbkonzept</dt><dd>Grün</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-derma">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Dermatologie</h1>
-    <div class="loc">Neuss</div>
-    <div class="rt"><p>Aufteilung der Fläche in passende Bereiche. Da die Praxis nur sehr wenig Fläche bietet, war eine genaue Planung der Raumfolgen, Beleuchtung und Möblierung bis ins Detail nötig. Zusätzlich wurde die Bauherrin bezüglich Materialien und Möblierung beraten - die finale Umsetzung erfolgte mit ortsansässigen Betrieben in Eigenregie.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/derma_01.jpg" alt="Empfang, Weiß-Design"></div>
-    <div class="row half">
-      <img src="assets/img/derma_03.jpg" alt="Empfang, Einbauschrank">
-      <img src="assets/img/derma_06.jpg" alt="Behandlungsraum">
-    </div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Neuss</dd>
-      <dt>Material</dt><dd>Helles, klares Weiß-Design</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-physio">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Physiotherapie</h1>
-    <div class="loc">Neuss</div>
-    <div class="rt"><p>Aufteilung der Fläche in passende Bereiche. Da die Flächen recht klein sind, war eine genaue Planung der Raumfolgen, Beleuchtung und teilweise auch der Möblierung bis ins Detail nötig. Zusätzlich wurden die Bauherren bezüglich Materialien und Möblierung beraten.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/physio_01.jpg" alt="Empfangstheke"></div>
-    <div class="row half">
-      <img src="assets/img/physio_05.jpg" alt="Turn- und Geräteraum">
-      <img src="assets/img/physio_02.jpg" alt="Behandlungsraum">
-    </div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Neuss</dd>
-      <dt>Material</dt><dd>Warmes Holz</dd>
-      <dt>Farbkonzept</dt><dd>Blaue Akzentwand, Pastellgrün</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-poggy">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Private Küche</h1>
-    <div class="loc">Köln</div>
-    <div class="rt"><p>In einem schlauchförmigen Raum sollte eine hochwertige Küche installiert werden, die dennoch einen Ort zum Verweilen darstellt. Die integrierte Sitzkoje mit Beleuchtung und Ladestation sowie ein schwenkbarer Tablartisch ermöglichen sowohl einen gemütlichen Imbiss als auch gemeinsames Kochen mit Gästen.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/poggy_02.jpg" alt="Küche mit Bora-Kochfeld"></div>
-    <div class="row half">
-      <img src="assets/img/poggy_01.jpg" alt="Sitzkoje">
-      <img src="assets/img/poggy_04.jpg" alt="Sitzkoje, zweite Perspektive">
-    </div>
-    <div class="row half">
-      <img src="assets/img/poggy_06.jpg" alt="Sitzkoje, Detail">
-      <img src="assets/img/poggy_05.jpg" alt="Sitzkoje mit Tablar">
-    </div>
-    <div class="row half">
-      <img src="assets/img/poggy_03.jpg" alt="Küche, Bora-Kochfeld, zweite Perspektive">
-      <img src="assets/img/poggy_09.jpg" alt="Bora-Kochfeld, Detail">
-    </div>
-    <div class="row full"><img src="assets/img/poggy_10.jpg" alt="Bora-Drehknauf, Detail"></div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Köln</dd>
-      <dt>Material</dt><dd>Bora, Quooker, Fenix, Sitzkoje mit Samtpolster</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-      <dt>Einbauten</dt><dd>Bbene</dd>
-      <dt>Fotos</dt><dd>Sebastian Meyer</dd>
-    </dl>
-  </div>
-</section>
-
-<section class="projektseite" id="proj-gastro">
-  <a class="ps-back" href="#projekte"><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
-  <div class="ps-head">
-    <h1>Gastronomie &amp; Kinderschminkecke</h1>
-    <div class="loc">Bergisch Gladbach</div>
-    <div class="rt"><p>Zwei Umgestaltungen im selben Bergisch Gladbacher Indoor-Spielplatz: Mit Hilfe eines Gastronomie-Beraters wurden die funktionellen Abläufe und das Angebot des vorhandenen Restaurants neu konzipiert. Eine klar strukturierte Fläche ermöglicht mehr Orientierung und stimmige Abläufe, das farbliche Konzept aus Schwarz, Eichenholz und Bepflanzung ergänzt das Dschungelkonzept des Hauses. Mit geringen Eingriffen wurde zudem die angrenzende Kinderschminkecke neu gestaltet: Elemente von Theatergarderoben mit Bühne wurden mit demselben Dschungelkonzept des Betreibers vereint.</p></div>
-  </div>
-  <div class="ps-gallery">
-    <div class="row full"><img src="assets/img/gastro_02.jpg" alt="Tresen, Ecke"></div>
-    <div class="row half">
-      <img src="assets/img/gastro_01.jpg" alt="Tresen">
-      <img src="assets/img/gastro_10.jpg" alt="Kassenaufsatz">
-    </div>
-    <div class="row full"><img src="assets/img/gastro_11.jpg" alt="Süßwaren-Bereich"></div>
-    <div class="row full"><img src="assets/img/schmink_03.jpg" alt="Kinderschminkecke, Theaterspiegel"></div>
-    <div class="row half">
-      <img src="assets/img/schmink_01.jpg" alt="Kinderschminkecke, Vorhang">
-      <img src="assets/img/schmink_04.jpg" alt="Kinderschminkecke, Tapetenecke">
-    </div>
-    <div class="row full"><img src="assets/img/schmink_05.jpg" alt="Kinderschminkecke, Theaterspiegel-Detail"></div>
-  </div>
-  <div class="ps-details">
-    <dl>
-      <dt>Ort</dt><dd>Bergisch Gladbach</dd>
-      <dt>Material</dt><dd>Eichenholz, Schwarz, Dschungel-Grafiken, Samt, Rundspiegel</dd>
-    </dl>
-    <dl>
-      <dt>Entwurf</dt><dd>Ulrike Wyen</dd>
-      <dt>Einbauten</dt><dd>Gutjahr</dd>
-      <dt>Gastronomieberatung</dt><dd>Volker Scheid</dd>
-      <dt>Fotos</dt><dd>Sebastian Meyer</dd>
-    </dl>
-  </div>
-</section>
-
 <section class="faq" id="faq">
   <div class="faq-inner">
-    <h2>Häufige Fragen</h2>
-    <details>
-      <summary>Für welche Räume planen Sie?</summary>
-      <div class="faq-body">Arztpraxen, Büros und Gewerbeflächen, Küchen, private Wohnräume sowie Cafés und Gastronomie - von einzelnen Räumen bis zur kompletten Fläche.</div>
-    </details>
-    <details>
-      <summary>Wie läuft die Zusammenarbeit ab?</summary>
-      <div class="faq-body">Am Anfang steht ein unverbindliches Erstgespräch. Danach entscheiden Sie, in welchem Umfang ich Sie begleite: von der Beratung über das Konzept und die Ausführungsplanung bis zur Fertigstellung.</div>
-    </details>
-    <details>
-      <summary>Arbeiten Sie auch nur beratend?</summary>
-      <div class="faq-body">Ja. Sie bestimmen den Umfang - das kann eine einmalige Beratung sein oder die durchgehende Begleitung inklusive meinem Netzwerk aus Handwerk und Herstellern.</div>
-    </details>
-    <details>
-      <summary>In welchem Umkreis arbeiten Sie?</summary>
-      <div class="faq-body">Schwerpunkt ist Köln und das Rheinland. Projekte darüber hinaus sind nach Absprache gerne möglich.</div>
-    </details>
-    <details>
-      <summary>Was kostet die Zusammenarbeit?</summary>
-      <div class="faq-body">Das hängt von Umfang und Leistung ab. Nach dem Erstgespräch erhalten Sie ein transparentes, auf Ihr Projekt abgestimmtes Angebot.</div>
-    </details>
+    <span class="eyebrow">Fragen</span>
+    <h2>Gute Fragen.</h2>
+    <div class="faq-grid">
+      <ul class="faq-list">
+        <li>
+          <button type="button" class="faq-q" aria-expanded="true" aria-controls="faq-a-0">
+            <span>Für welche Räume planen Sie?</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+          </button>
+          <div id="faq-a-0" class="faq-inline"><p>Arztpraxen, Büros und Gewerbeflächen, Küchen, private Wohnräume sowie Cafés und Gastronomie - von einzelnen Räumen bis zur kompletten Fläche.</p></div>
+        </li>
+        <li>
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-1">
+            <span>Wie läuft die Zusammenarbeit ab?</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+          </button>
+          <div id="faq-a-1" class="faq-inline" hidden><p>Am Anfang steht ein unverbindliches Erstgespräch. Danach entscheiden Sie, in welchem Umfang ich Sie begleite: von der Beratung über das Konzept und die Ausführungsplanung bis zur Fertigstellung.</p></div>
+        </li>
+        <li>
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
+            <span>Arbeiten Sie auch nur beratend?</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+          </button>
+          <div id="faq-a-2" class="faq-inline" hidden><p>Ja. Sie bestimmen den Umfang - das kann eine einmalige Beratung sein oder die durchgehende Begleitung inklusive meinem Netzwerk aus Handwerk und Herstellern.</p></div>
+        </li>
+        <li>
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
+            <span>In welchem Umkreis arbeiten Sie?</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+          </button>
+          <div id="faq-a-3" class="faq-inline" hidden><p>Schwerpunkt ist Köln und das Rheinland. Projekte darüber hinaus sind nach Absprache gerne möglich.</p></div>
+        </li>
+        <li>
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-4">
+            <span>Was kostet die Zusammenarbeit?</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+          </button>
+          <div id="faq-a-4" class="faq-inline" hidden><p>Das hängt von Umfang und Leistung ab. Nach dem Erstgespräch erhalten Sie ein transparentes, auf Ihr Projekt abgestimmtes Angebot.</p></div>
+        </li>
+      </ul>
+      <div class="faq-panel" aria-live="polite">
+        <p class="faq-panel-label">Antwort</p>
+        <h3 class="faq-panel-q">Für welche Räume planen Sie?</h3>
+        <p class="faq-panel-a">Arztpraxen, Büros und Gewerbeflächen, Küchen, private Wohnräume sowie Cafés und Gastronomie - von einzelnen Räumen bis zur kompletten Fläche.</p>
+        <div class="faq-by">
+          <img class="faq-avatar" src="assets/img/avatar_ulrike.jpg" alt="Ulrike Wyen" width="160" height="160" decoding="async" loading="lazy">
+          <div>
+            <div class="faq-by-name">Ulrike Wyen</div>
+            <div class="faq-by-role">Innenarchitektin, Köln</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -642,7 +341,7 @@
       </div>
       <div class="consent">
         <input type="checkbox" id="kf-consent" name="consent" required>
-        <label for="kf-consent">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Beantwortung meiner Anfrage gespeichert und verarbeitet werden.</label>
+        <label for="kf-consent">Ich habe die <a href='/datenschutz'>Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Beantwortung meiner Anfrage gespeichert und verarbeitet werden.</label>
       </div>
       <button type="submit">Nachricht senden</button>
       <p class="form-note">Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.</p>
@@ -654,143 +353,23 @@
 <footer>
   &copy; 2026 Interior&amp;Design Ulrike Wyen · Innenarchitektin · Köln
   <div class="legal-links">
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
+    <a href='/impressum'>Impressum</a>
+    <a href='/datenschutz'>Datenschutz</a>
   </div>
 </footer>
 
-<script>
-  // Horizontaler Wisch-Übergang im Hero: das neue Bild schiebt sich
-  // von rechts über das aktuelle. Zwei Ebenen wechseln sich als
-  // "eingeblendet" (vorne, sichtbar) und "wartend" (rechts außerhalb) ab.
-  (function(){
-    const images = ['assets/img/kueche_clouth.jpg', 'assets/img/wohnen_schoser.jpg', 'assets/img/wohnen_schoser_regal.jpg'];
-    const slideEls = [document.getElementById('heroA'), document.getElementById('heroB')];
-    const zoomEls = slideEls.map(el => el.querySelector('.zoom-layer'));
-    let idx = 0;
-    let front = 0; // Index (0/1) der Ebene, die gerade sichtbar/vorne ist
+<script src="home.js" defer></script>
 
-    function setImage(layerIndex, imageIndex){
-      zoomEls[layerIndex].style.backgroundImage = `url(${images[imageIndex]})`;
-    }
-    // Startet den Zoom-Effekt exakt in dem Moment, in dem ein Bild sichtbar wird
-    // (nicht schon während es rechts außerhalb wartet - sonst ist der Zoom
-    // beim Einschieben bereits abgelaufen).
-    function restartZoom(layerIndex){
-      zoomEls[layerIndex].style.animation = 'none';
-      void zoomEls[layerIndex].offsetWidth;
-      zoomEls[layerIndex].style.animation = '';
-    }
-
-    // Start: Ebene 0 sichtbar mit Bild 0, Ebene 1 wartet rechts mit Bild 1
-    setImage(0, 0);
-    restartZoom(0);
-    slideEls[0].style.transform = 'translateX(0)';
-    slideEls[0].style.zIndex = 1;
-    setImage(1, 1 % images.length);
-    slideEls[1].style.transform = 'translateX(100%)';
-    slideEls[1].style.zIndex = 2;
-
-    function tick(){
-      const back = front === 0 ? 1 : 0; // die wartende Ebene wird zur einschiebenden
-      idx = (idx + 1) % images.length;
-
-      restartZoom(back); // Zoom startet jetzt, im Moment des Einschiebens
-      slideEls[back].style.zIndex = 2;      // schiebt sich über die aktuelle
-      slideEls[front].style.zIndex = 1;
-      slideEls[back].style.transform = 'translateX(0)'; // Wisch-Bewegung ins Bild
-
-      setTimeout(() => {
-        // die jetzt verdeckte, alte Ebene lautlos rechts außen parken
-        // und mit dem übernächsten Bild bestücken (Zoom erst beim nächsten Einsatz starten)
-        slideEls[front].style.transition = 'none';
-        slideEls[front].style.transform = 'translateX(100%)';
-        void slideEls[front].offsetWidth;
-        slideEls[front].style.transition = '';
-        const nextIdx = (idx + 1) % images.length;
-        setImage(front, nextIdx);
-        front = back;
-      }, 2500);
-    }
-    setInterval(tick, 9000);
-  })();
-
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.classList.add('in-view');
-        io.unobserve(e.target);
-      }
-    });
-  }, {threshold:0.15});
-  document.querySelectorAll('.card, .proj-card').forEach((c,i)=>{
-    c.style.transitionDelay = (i%6*70)+'ms';
-    io.observe(c);
-  });
-  document.querySelectorAll('.ps-gallery').forEach(gallery=>{
-    gallery.querySelectorAll('img').forEach((img,i)=>{
-      img.style.transitionDelay = (i*80)+'ms';
-      io.observe(img);
-    });
-  });
-
-  /* Kontaktformular: sendet an Netlify Forms (data-netlify="true").
-     Dafür muss in Netlify unter „Forms" die Formularerfassung aktiviert sein. */
-  (function(){
-    const form = document.getElementById('wyenContactForm');
-    if(!form) return;
-    const wrap = document.getElementById('kontaktForm');
-    const status = document.getElementById('kfStatus');
-    function encode(data){
-      return Object.keys(data).map(k => encodeURIComponent(k) + '=' + encodeURIComponent(data[k])).join('&');
-    }
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      if(form.querySelector('#kf-website').value){ return; } // Honeypot ausgelöst
-      const fd = new FormData(form);
-      const payload = {};
-      fd.forEach((v, k) => { payload[k] = v; });
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encode(payload)
-      }).then(() => {
-        status.textContent = 'Danke für Ihre Nachricht! Ich melde mich so schnell wie möglich bei Ihnen zurück.';
-        status.classList.add('is-success');
-        wrap.classList.add('is-sent');
-      }).catch(() => {
-        status.textContent = 'Leider konnte Ihre Nachricht nicht gesendet werden. Bitte schreiben Sie mir direkt an interior@wyen.net.';
-        status.style.display = 'block';
-        status.style.background = 'rgba(200,60,40,0.08)';
-        status.style.color = '#8a2b1c';
-        status.style.border = '1px solid rgba(200,60,40,0.25)';
-      });
-    });
-  })();
-
-  /* „mehr lesen" für lange Textblöcke (.rt). Ohne JS bleibt der volle Text sichtbar. */
-  (function(){
-    document.querySelectorAll('.rt').forEach(function(el){
-      var limit = parseFloat(getComputedStyle(el).fontSize) * 5; // ~5em = Klapphöhe
-      if(el.scrollHeight <= limit + 8) return; // schon kurz genug -> kein Button
-      el.classList.add('is-collapsed');
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'rt-more';
-      btn.textContent = 'mehr lesen';
-      btn.setAttribute('aria-expanded','false');
-      btn.addEventListener('click', function(){
-        var collapsed = el.classList.toggle('is-collapsed');
-        btn.textContent = collapsed ? 'mehr lesen' : 'weniger anzeigen';
-        btn.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
-      });
-      el.insertAdjacentElement('afterend', btn);
-    });
-  })();
-
-</script>
-
+<script src="site.js" defer></script>
 <script src="menu.js" defer></script>
+
+<!-- Feste Schnellzugriffe unten rechts. Ziele werden in der finalen Fassung eingetragen. -->
+<div class="social-dock">
+  <span class="dock-hint" id="dockHint" hidden>Wird in der finalen Fassung verknüpft</span>
+  <a class="dock-btn whatsapp" href="#" data-soon="1" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/></svg></a>
+  <a class="dock-btn instagram" href="#" data-soon="1" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" fill-rule="evenodd" d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zM12 7.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9zm0 2a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM17.8 5.2a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
+  <a class="dock-btn pinterest" href="#" data-soon="1" aria-label="Pinterest" title="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg></a>
+</div>
 
 </body>
 </html>
