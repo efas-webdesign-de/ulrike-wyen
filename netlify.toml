@@ -1,0 +1,5 @@
+# Statische Seite (HTML/CSS/JS, kein Build-Schritt).
+# Publish = Repo-Wurzel, da index.html & Co. direkt hier liegen.
+[build]
+  publish = "."
+  command = ""
