@@ -8,7 +8,7 @@ const io = new IntersectionObserver((entries)=>{
     }
   });
 }, {threshold:0.15});
-document.querySelectorAll('.card, .proj-card').forEach((c,i)=>{
+document.querySelectorAll('.card, .proj-card, .blog-card').forEach((c,i)=>{
   if(c.closest('.rail-track')) return;   // Karten in Bahnen: die Bahn wird als Ganzes eingeblendet
   c.style.transitionDelay = (i%6*70)+'ms';
   io.observe(c);

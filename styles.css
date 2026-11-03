@@ -523,6 +523,44 @@
     .legal-page{padding:80px 20px 100px;}
   }
 
+  /* ---- BLOG (Platzhalter) ---- */
+  .blog-page{padding:120px 48px 90px; background:#fff; border-top:1px solid var(--line);}
+  .blog-head{max-width:720px; margin:0 auto 54px; text-align:center;}
+  .blog-head .eyebrow{font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:16px;}
+  .blog-head h1{font-size:clamp(26px,3.4vw,40px); font-weight:400; letter-spacing:-0.01em; margin-bottom:18px;}
+  .blog-head .blog-intro{font-size:15px; line-height:1.75; color:rgba(32,33,31,0.72);}
+  .blog-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; max-width:1180px; margin:0 auto;}
+  .blog-card{
+    background:var(--paper); border:1px solid var(--line); border-radius:3px; overflow:hidden;
+    display:flex; flex-direction:column;
+    transition:opacity 0.9s ease, transform 0.9s ease, box-shadow 0.3s ease;
+  }
+  .blog-card:hover{box-shadow:0 14px 34px rgba(32,33,31,0.10);}
+  .js .blog-card{opacity:0; transform:translateY(30px);}
+  .js .blog-card.in-view{opacity:1; transform:none;}
+  .blog-card .thumb{
+    position:relative; aspect-ratio:3/2;
+    display:flex; align-items:center; justify-content:center;
+    background:linear-gradient(135deg,#efe9df 0%, #e5dccd 100%);
+    color:rgba(32,33,31,0.26);
+  }
+  .blog-card .thumb svg{width:44px; height:44px;}
+  .blog-card .soon-badge{
+    position:absolute; top:14px; left:14px;
+    font-size:10px; letter-spacing:0.12em; text-transform:uppercase;
+    background:rgba(255,255,255,0.92); color:var(--accent);
+    padding:5px 10px; border-radius:2px;
+  }
+  .blog-card .blog-meta{padding:22px 22px 26px;}
+  .blog-card .blog-cat{font-size:10px; letter-spacing:0.12em; text-transform:uppercase; color:var(--brand-green); display:block; margin-bottom:10px;}
+  .blog-card .blog-meta h2{font-size:17px; font-weight:500; letter-spacing:-0.01em; margin-bottom:10px;}
+  .blog-card .blog-meta p{font-size:14px; line-height:1.7; color:rgba(32,33,31,0.68);}
+  @media (max-width:900px){ .blog-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:620px){
+    .blog-page{padding:96px 20px 70px;}
+    .blog-grid{grid-template-columns:1fr; gap:20px;}
+  }
+
 /* ---- „mehr lesen" (Progressive Enhancement: ohne JS voller Text) ---- */
 .rt.is-collapsed{max-height:4.8em; overflow:hidden; position:relative;}
 .rt.is-collapsed::after{
