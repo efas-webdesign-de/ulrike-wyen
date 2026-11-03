@@ -364,6 +364,10 @@
   .js .ps-gallery img.in-view{opacity:1; transform:translateY(0);}
   .ps-gallery .row.full img{aspect-ratio:16/9.5;}
   .ps-gallery .row.half img{aspect-ratio:4/3.2;}
+  /* Technische Plaene/Studien: vollstaendig zeigen statt beschneiden */
+  .ps-gallery .row.full img.plan, .ps-gallery .row.half img.plan{
+    aspect-ratio:auto; height:auto; object-fit:contain; background:#fff; border:1px solid var(--line);
+  }
 
   .ps-details{
     max-width:1100px; margin:0 auto; padding-top:48px; border-top:1px solid var(--line);
