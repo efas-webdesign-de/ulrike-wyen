@@ -3,7 +3,7 @@
 // von rechts über das aktuelle. Zwei Ebenen wechseln sich als
 // "eingeblendet" (vorne, sichtbar) und "wartend" (rechts außerhalb) ab.
 (function(){
-  const images = ['assets/img/kueche_clouth.jpg', 'assets/img/wohnen_schoser.jpg'];
+  const images = ['assets/img/kueche_clouth.jpg', 'assets/img/wohnen_schoser.jpg', 'assets/img/buero_hero.jpg'];
   const slideEls = [document.getElementById('heroA'), document.getElementById('heroB')];
   const zoomEls = slideEls.map(el => el.querySelector('.zoom-layer'));
   let idx = 0;
