@@ -328,4 +328,86 @@ function buildProjekte(projects) {
 const projects = loadProjects();
 if (projects.length) buildProjekte(projects);
 
-console.log(`Build fertig: Passthrough + Blog (${posts.length}) + Projekte (${projects.length}).`);
+/* ---------------- 4) Startseite (index.html): FAQ, Ueber mich ---------------- */
+
+function loadYmlFile(name) {
+  const f = join(root, 'content', name);
+  if (!existsSync(f)) return null;
+  try { return yaml.load(readFileSync(f, 'utf8')); } catch (e) { return null; }
+}
+
+function genFaq(items) {
+  const list = items.map((it, i) => `        <li>
+          <button type="button" class="faq-q" aria-expanded="${i === 0 ? 'true' : 'false'}" aria-controls="faq-a-${i}">
+            <span>${escText(it.question)}</span><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+          </button>
+          <div id="faq-a-${i}" class="faq-inline"${i === 0 ? '' : ' hidden'}><p>${escText(it.answer)}</p></div>
+        </li>`).join('\n');
+  const f0 = items[0] || { question: '', answer: '' };
+  return `      <ul class="faq-list">
+${list}
+      </ul>
+      <div class="faq-panel" aria-live="polite">
+        <p class="faq-panel-label">Antwort</p>
+        <h3 class="faq-panel-q">${escText(f0.question)}</h3>
+        <p class="faq-panel-a">${escText(f0.answer)}</p>
+        <div class="faq-by">
+          <img class="faq-avatar" src="assets/img/avatar_ulrike.jpg" alt="Ulrike Wyen" width="160" height="160" decoding="async" loading="lazy">
+          <div>
+            <div class="faq-by-name">Ulrike Wyen</div>
+            <div class="faq-by-role">Innenarchitektin, Köln</div>
+          </div>
+        </div>
+      </div>`;
+}
+
+function genUeberMich(d) {
+  const bodyP = (d.body || []).map(p => `      <p>${escText(p)}</p>`).join('\n');
+  const facts = (d.facts || []).map(f => `      <div class="fact">
+        <h4>${escText(f.title)}</h4>
+        <p>${escText(f.text)}</p>
+      </div>`).join('\n');
+  const vita = (d.vita || []).map(v => `    <div class="vita-row"><div class="yr">${escText(v.year)}</div><div class="desc">${escText(v.desc)}</div></div>`).join('\n');
+  return `
+  <div class="um-intro">
+    <span class="eyebrow">Über mich</span>
+    <h1>${escText(d.headline)}</h1>
+    <p>${escText(d.lead)}</p>
+    <div class="rt">
+${bodyP}
+    </div>
+  </div>
+
+  <div class="um-grid">
+    <div class="photo"><img src="${relSrc(normUrl(d.portrait))}" alt="${escAttr(d.portrait_alt || '')}"${dimAttr(normUrl(d.portrait))} decoding="async" loading="lazy"></div>
+    <div class="um-facts">
+${facts}
+    </div>
+  </div>
+
+  <div class="um-vita">
+    <h2>${escText(d.vita_heading)}</h2>
+${vita}
+  </div>
+`;
+}
+
+function buildIndex() {
+  let html = readFileSync(join(root, 'index.html'), 'utf8');
+
+  const faqData = loadYmlFile('faq.yml');
+  const faq = faqData && Array.isArray(faqData.items) ? faqData.items : [];
+  if (faq.length) {
+    html = html.replace(/(<div class="faq-grid">)[\s\S]*?(\n    <\/div>)/, (m, a, b) => a + '\n' + genFaq(faq) + b);
+  }
+
+  const um = loadYmlFile('ueber-mich.yml');
+  if (um) {
+    html = html.replace(/(<section class="ueber-mich-voll"[^>]*>)[\s\S]*?(<\/section>)/, (m, a, b) => a + genUeberMich(um) + b);
+  }
+
+  writeFileSync(join(dist, 'index.html'), html);
+}
+buildIndex();
+
+console.log(`Build fertig: Passthrough + Blog (${posts.length}) + Projekte (${projects.length}) + Startseite.`);
