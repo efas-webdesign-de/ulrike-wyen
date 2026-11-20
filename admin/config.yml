@@ -1,0 +1,37 @@
+# Sveltia-CMS-Konfiguration fuer die Ulrike-Wyen-Seite.
+# Aktuell: Blog. Projekte / FAQ / Ueber-mich kommen als weitere Collections dazu.
+#
+# Lokaler Test (ohne Login/GitHub): Seite lokal servieren, im Chrome/Edge/Brave
+#   http://localhost:<port>/admin/index.html oeffnen -> "Work with Local Repository"
+#   -> den Projektordner ulrike-wyen auswaehlen. Sveltia schreibt dann in content/.
+
+backend:
+  name: github
+  repo: efas-webdesign-de/ulrike-wyen
+  branch: main
+
+# Wohin hochgeladene Bilder gespeichert werden (Repo-Pfad) und unter welcher URL sie liegen.
+media_folder: assets/blog
+public_folder: /assets/blog
+
+# Deutsche Oberflaeche
+locale: de
+
+collections:
+  - name: blog
+    label: Blog
+    label_singular: Beitrag
+    description: Beitraege fuer den Blog. Als Entwurf markierte Beitraege werden nicht veroeffentlicht.
+    folder: content/blog
+    create: true
+    extension: md
+    format: frontmatter
+    sortable_fields: [date, title]
+    fields:
+      - { label: Titel, name: title, widget: string }
+      - { label: Datum, name: date, widget: datetime, format: "YYYY-MM-DD", time_format: false }
+      - { label: Kategorie, name: category, widget: string, required: false, hint: "z. B. Projekt, Material & Farbe, Hinter den Kulissen" }
+      - { label: Titelbild, name: image, widget: image, required: false }
+      - { label: Kurztext (für die Übersicht), name: excerpt, widget: text, required: false }
+      - { label: "Entwurf (nicht veröffentlichen)", name: draft, widget: boolean, default: false }
+      - { label: Text, name: body, widget: markdown }
