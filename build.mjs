@@ -1,10 +1,10 @@
-// Mini-Build fuer die Ulrike-Wyen-Seite - kein Framework, nur Node + 'marked'.
+// Mini-Build fuer die Ulrike-Wyen-Seite - kein Framework.
+// Deps: marked (Markdown), js-yaml (Frontmatter), image-size (Bildmasse).
 //
 // Ablauf:
-//   1) Passthrough: statische Seite 1:1 nach dist/ kopieren.
-//   2) Blog: content/blog/*.md -> dist/blog.html (Liste) + dist/blog/<slug>.html (Beitraege).
-//
-// Spaeter kommen Projekte / FAQ / Ueber-mich nach dem gleichen Muster dazu.
+//   1) Passthrough: statische Seite 1:1 nach dist/.
+//   2) Blog:     content/blog/*.md       -> dist/blog/...
+//   3) Projekte: content/projekte/*.md   -> dist/projekte.html (Uebersicht + Detailseiten)
 
 import {
   readdirSync, rmSync, mkdirSync, cpSync,
@@ -12,11 +12,12 @@ import {
 } from 'node:fs';
 import { join } from 'node:path';
 import { marked } from 'marked';
+import yaml from 'js-yaml';
+import { imageSize } from 'image-size';
 
 const root = process.cwd();
 const dist = join(root, 'dist');
 
-// Diese Eintraege gehoeren NICHT in die veroeffentlichte Seite:
 const BLOCK = new Set([
   'dist', 'node_modules', '.git', 'content', 'src',
   'build.mjs', 'package.json', 'package-lock.json',
@@ -35,10 +36,13 @@ function formatDate(iso) {
   return `${d}. ${MONTHS[m - 1]} ${y}`;
 }
 
+// Text-Inhalt: nur & und < maskieren (HTML-Content-Regeln).
+function escText(s = '') { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+// Attributwert: & und " maskieren.
+function escAttr(s = '') { return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;'); }
+// Fuer Blog (grob, reicht dort).
 function escapeHtml(s = '') {
-  return String(s)
-    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
 function slugify(s = '') {
@@ -52,26 +56,38 @@ function normUrl(p = '') {
   if (/^https?:\/\//.test(p) || p.startsWith('/')) return p;
   return '/' + p.replace(/^\.?\//, '');
 }
+// Wurzel-relativer Pfad -> seiten-relativ (projekte.html liegt im Root).
+function relSrc(p = '') { return String(p).replace(/^\//, ''); }
 
-// Sehr einfacher Frontmatter-Parser (key: value zwischen --- Zeilen).
 function parseFront(raw) {
   const m = raw.match(/^﻿?---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!m) return { data: {}, body: raw };
-  const data = {};
-  for (const line of m[1].split(/\r?\n/)) {
-    const i = line.indexOf(':');
-    if (i < 0) continue;
-    const k = line.slice(0, i).trim();
-    let v = line.slice(i + 1).trim().replace(/^["']|["']$/g, '');
-    data[k] = v;
-  }
+  let data = {};
+  try { data = yaml.load(m[1]) || {}; } catch (e) { data = {}; }
   return { data, body: m[2] };
 }
 
-/* ---------------- Layout ---------------- */
+// Bildmasse (gecacht). Pfad ist wurzel-relativ (/assets/...).
+const dimCache = new Map();
+function imgDims(src) {
+  const rel = relSrc(src);
+  if (dimCache.has(rel)) return dimCache.get(rel);
+  let d = null;
+  try {
+    const abs = join(root, rel);
+    if (existsSync(abs)) { const r = imageSize(readFileSync(abs)); d = { w: r.width, h: r.height }; }
+  } catch (e) { /* ignorieren */ }
+  dimCache.set(rel, d);
+  return d;
+}
+function dimAttr(src) {
+  const d = imgDims(src);
+  return d ? ` width="${d.w}" height="${d.h}"` : '';
+}
+
+/* ---------------- Layout (base.html) ---------------- */
 
 const base = readFileSync(join(root, 'src', 'base.html'), 'utf8');
-
 function page({ title, description, robots = '', content, active = '' }) {
   let html = base
     .replace('{{TITLE}}', () => escapeHtml(title))
@@ -79,10 +95,7 @@ function page({ title, description, robots = '', content, active = '' }) {
     .replace('{{ROBOTS}}', () => (robots ? `\n<meta name="robots" content="${robots}">` : ''))
     .replace('{{CONTENT}}', () => content);
   if (active === 'blog') {
-    html = html.replace(
-      "<li><a href='/blog'>Blog</a></li>",
-      '<li><a href=\'/blog\' aria-current="page">Blog</a></li>',
-    );
+    html = html.replace("<li><a href='/blog'>Blog</a></li>", '<li><a href=\'/blog\' aria-current="page">Blog</a></li>');
   }
   return html;
 }
@@ -106,10 +119,12 @@ function loadPosts() {
     if (!file.endsWith('.md')) continue;
     const { data, body } = parseFront(readFileSync(join(dir, file), 'utf8'));
     if (String(data.draft).toLowerCase() === 'true') continue;
+    let date = data.date || '';
+    if (date instanceof Date) date = date.toISOString().slice(0, 10);
     posts.push({
       slug: slugify(data.slug || file.replace(/\.md$/, '')),
       title: data.title || 'Ohne Titel',
-      date: data.date || '',
+      date: String(date),
       category: data.category || '',
       image: normUrl(data.image || ''),
       excerpt: data.excerpt || '',
@@ -155,7 +170,6 @@ const PLACEHOLDER_CARDS = [
     </article>`).join('\n');
 
 const posts = loadPosts();
-
 const grid = posts.length ? posts.map(blogCard).join('\n') : PLACEHOLDER_CARDS;
 const introTail = posts.length ? '' : ' Die ersten Beiträge folgen in Kürze.';
 
@@ -185,8 +199,6 @@ writeFileSync(join(dist, 'blog', 'index.html'), page({
   content: blogList,
   active: 'blog',
 }));
-
-// Einzelne Beitragsseiten
 for (const p of posts) {
   const cover = p.image ? `<img class="post-cover" src="${p.image}" alt="${escapeHtml(p.title)}">` : '';
   const meta = [
@@ -214,4 +226,106 @@ ${p.bodyHtml}
   }));
 }
 
-console.log(`Build fertig: Passthrough + Blog (${posts.length} Beitrag/Beitraege).`);
+/* ---------------- 3) Projekte ---------------- */
+
+const GROUP_ORDER = ['Privat', 'Praxen', 'Gewerblich'];
+
+function loadProjects() {
+  const dir = join(root, 'content', 'projekte');
+  if (!existsSync(dir)) return [];
+  const projects = [];
+  for (const file of readdirSync(dir)) {
+    if (!file.endsWith('.md')) continue;
+    const { data, body } = parseFront(readFileSync(join(dir, file), 'utf8'));
+    projects.push({
+      id: data.id || ('proj-' + file.replace(/\.md$/, '')),
+      group: data.group || '',
+      order: Number(data.order) || 99,
+      title: data.title || '',
+      card_title: data.card_title || data.title || '',
+      location: data.location || '',
+      thumb: normUrl(data.thumb || ''),
+      thumb_alt: data.thumb_alt || data.title || '',
+      gallery: Array.isArray(data.gallery) ? data.gallery : [],
+      details: Array.isArray(data.details) ? data.details : [],
+      description: (body || '').trim(),
+    });
+  }
+  return projects;
+}
+
+function orderedProjects(projects) {
+  const out = [];
+  for (const group of GROUP_ORDER) {
+    out.push(...projects.filter(p => p.group === group).sort((a, b) => a.order - b.order));
+  }
+  return out;
+}
+
+function imgTag(im) {
+  const cls = im && im.plan ? 'class="plan" ' : '';
+  return `<img ${cls}src="${relSrc(im.src)}" alt="${escAttr(im.alt || '')}"${dimAttr(im.src)} decoding="async" loading="lazy">`;
+}
+
+function galleryRow(row) {
+  const imgs = Array.isArray(row.images) ? row.images : [];
+  if (row.layout === 'full') {
+    return `    <div class="row full">${imgs.map(imgTag).join('')}</div>`;
+  }
+  return `    <div class="row half">\n${imgs.map(im => '      ' + imgTag(im)).join('\n')}\n    </div>`;
+}
+
+function detailSection(p) {
+  const loc = p.location ? `\n    <div class="loc">${escText(p.location)}</div>` : '';
+  const rt = p.description ? `\n    <div class="rt"><p>${escText(p.description)}</p></div>` : '';
+  const rows = p.gallery.map(galleryRow).join('\n');
+  const dls = (p.details || []).map(group =>
+    `    <dl>\n${group.map(f => `      <dt>${escText(f.label)}</dt><dd>${escText(f.value)}</dd>`).join('\n')}\n    </dl>`,
+  ).join('\n');
+  return `<section class="projektseite" id="${p.id}">
+  <a class="ps-back" href='#uebersicht'><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
+  <div class="ps-head">
+    <h1>${escText(p.title)}</h1>${loc}${rt}
+  </div>
+  <div class="ps-gallery">
+${rows}
+  </div>
+  <div class="ps-details">
+${dls}
+  </div>
+</section>`;
+}
+
+function overviewCard(p, idx) {
+  const lazy = idx > 3 ? ' loading="lazy"' : '';
+  return `      <a class="proj-card" href="#${p.id}">
+      <div class="thumb"><img src="${relSrc(p.thumb)}" alt="${escAttr(p.thumb_alt)}"${dimAttr(p.thumb)} decoding="async"${lazy}></div>
+      <div class="meta"><h3>${escText(p.card_title)}</h3></div></a>`;
+}
+
+function genOverview(projects) {
+  let idx = 0;
+  return GROUP_ORDER.map(group => {
+    const items = projects.filter(p => p.group === group).sort((a, b) => a.order - b.order);
+    const cards = items.map(p => overviewCard(p, ++idx)).join('\n');
+    return `    <div class="proj-group">
+      <div class="group-label">${group}</div>
+      <div class="proj-grid">
+${cards}
+      </div>
+    </div>`;
+  }).join('\n\n');
+}
+
+function buildProjekte(projects) {
+  let html = readFileSync(join(root, 'projekte.html'), 'utf8');
+  const details = orderedProjects(projects).map(detailSection).join('\n');
+  html = html.replace('<!--PROJ_GROUPS-->', () => genOverview(projects));
+  html = html.replace('<!--PROJ_DETAILS-->', () => details);
+  writeFileSync(join(dist, 'projekte.html'), html);
+}
+
+const projects = loadProjects();
+if (projects.length) buildProjekte(projects);
+
+console.log(`Build fertig: Passthrough + Blog (${posts.length}) + Projekte (${projects.length}).`);
