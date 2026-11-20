@@ -1,5 +1,5 @@
-# Statische Seite (HTML/CSS/JS, kein Build-Schritt).
-# Publish = Repo-Wurzel, da index.html & Co. direkt hier liegen.
+# Build: kleines Node-Skript (build.mjs) generiert die Seite nach dist/.
+# CMS-Inhalte (content/) werden zu HTML gebaut; statische Seiten laufen durch.
 [build]
-  publish = "."
-  command = ""
+  publish = "dist"
+  command = "npm run build"
