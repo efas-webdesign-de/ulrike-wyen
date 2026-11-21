@@ -12,8 +12,6 @@ backend:
 media_folder: assets/img
 public_folder: /assets/img
 
-locale: de
-
 collections:
   # ---------------- Projekte ----------------
   - name: projekte
