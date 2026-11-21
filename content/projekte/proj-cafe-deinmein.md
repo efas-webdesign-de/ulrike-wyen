@@ -7,6 +7,7 @@ card_title: Café Dein&Mein
 location: Köln
 thumb: /assets/img/cafe_deinmein_01.jpg
 thumb_alt: Café Dein&Mein
+description: Umgestaltung eines Kiosks in ein Café. Eine gerade Theke mit geschwungenem Abschluss bildet das Herzstück des Cafés. Die neue Wandvertäfelung definiert Bereiche und schafft trotz reduzierter Gestaltung einen nestartigen Charakter.
 gallery:
   - layout: full
     images:
@@ -23,9 +24,9 @@ gallery:
       - src: /assets/img/cafe_deinmein_04.jpg
         alt: Wandvertäfelung, Detail
 details:
-  - - label: Ort
-      value: Köln
-    - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Ort
+        value: Köln
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Umgestaltung eines Kiosks in ein Café. Eine gerade Theke mit geschwungenem Abschluss bildet das Herzstück des Cafés. Die neue Wandvertäfelung definiert Bereiche und schafft trotz reduzierter Gestaltung einen nestartigen Charakter.

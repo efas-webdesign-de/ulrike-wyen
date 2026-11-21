@@ -7,6 +7,7 @@ card_title: Kardiologische Praxis
 location: Köln
 thumb: /assets/img/arzt_feldmann.jpg
 thumb_alt: Kardiologie
+description: Für eine bestehende kardiologische Praxis in Köln wurde ein ganzheitliches neues Konzept geschaffen, welches stufenweise verwirklicht werden soll. Erster Umbauteil war der EKG-Raum sowie ein Besprechungszimmer. Intensives Blau in Kombination mit Beige und Nussbaum stellt die farbliche Gestaltungsgrundlage dar.
 gallery:
   - layout: full
     images:
@@ -23,11 +24,12 @@ gallery:
       - src: /assets/img/feldmann_g05.jpg
         alt: Garderobe mit Muuto-Dots
 details:
-  - - label: Ort
-      value: Köln
-  - - label: Entwurf
-      value: Ulrike Wyen
-    - label: Fotos
-      value: Sebastian Meyer
+  - entries:
+      - label: Ort
+        value: Köln
+  - entries:
+      - label: Entwurf
+        value: Ulrike Wyen
+      - label: Fotos
+        value: Sebastian Meyer
 ---
-Für eine bestehende kardiologische Praxis in Köln wurde ein ganzheitliches neues Konzept geschaffen, welches stufenweise verwirklicht werden soll. Erster Umbauteil war der EKG-Raum sowie ein Besprechungszimmer. Intensives Blau in Kombination mit Beige und Nussbaum stellt die farbliche Gestaltungsgrundlage dar.

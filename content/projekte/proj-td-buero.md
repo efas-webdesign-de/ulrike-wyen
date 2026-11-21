@@ -7,6 +7,7 @@ card_title: Bürofläche
 location: Bergisch Gladbach
 thumb: /assets/img/buero_td.jpg
 thumb_alt: Bürofläche
+description: Eine vorhandene Bürofläche sollte für mehr Mitarbeitende umgestaltet werden. Die vorhandenen hochwertigen Büromöbel wurden umsortiert und mit speziell angefertigten Elementen ergänzt, die nun gleichmäßige Arbeitsinseln darstellen - mit Ruhezonen durch verschiedene Höhen und integrierte Bepflanzung.
 gallery:
   - layout: full
     images:
@@ -25,13 +26,14 @@ gallery:
       - src: /assets/img/tdbuero_05.jpg
         alt: Raumteiler mit Pflanze
 details:
-  - - label: Ort
-      value: Bergisch Gladbach
-  - - label: Entwurf
-      value: Ulrike Wyen
-    - label: Einbauten
-      value: Gutjahr
-    - label: Fotos
-      value: Sebastian Meyer
+  - entries:
+      - label: Ort
+        value: Bergisch Gladbach
+  - entries:
+      - label: Entwurf
+        value: Ulrike Wyen
+      - label: Einbauten
+        value: Gutjahr
+      - label: Fotos
+        value: Sebastian Meyer
 ---
-Eine vorhandene Bürofläche sollte für mehr Mitarbeitende umgestaltet werden. Die vorhandenen hochwertigen Büromöbel wurden umsortiert und mit speziell angefertigten Elementen ergänzt, die nun gleichmäßige Arbeitsinseln darstellen - mit Ruhezonen durch verschiedene Höhen und integrierte Bepflanzung.

@@ -7,6 +7,7 @@ card_title: Flur und Garderobe
 location: Bergisch Gladbach
 thumb: /assets/img/boogen_flur_01.jpg
 thumb_alt: Flur und Garderobe
+description: Ein schmaler Eingangsbereich erhält ein Stauraummöbel mit Taschenabwurf und innenliegenden Schubladen. Die als Steckbrett ausgearbeitete Kinder-Garderobe bietet Platz für Jacken, Rucksäcke und mehr. Der mit Stoff bezogene Schrank beleuchtet zugleich die Nische.
 gallery:
   - layout: full
     images:
@@ -31,7 +32,7 @@ gallery:
       - src: /assets/img/boogen_flur_07.jpg
         alt: Flurschrank, textil bezogen
 details:
-  - - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Ein schmaler Eingangsbereich erhält ein Stauraummöbel mit Taschenabwurf und innenliegenden Schubladen. Die als Steckbrett ausgearbeitete Kinder-Garderobe bietet Platz für Jacken, Rucksäcke und mehr. Der mit Stoff bezogene Schrank beleuchtet zugleich die Nische.

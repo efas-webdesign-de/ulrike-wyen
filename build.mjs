@@ -248,7 +248,7 @@ function loadProjects() {
       thumb_alt: data.thumb_alt || data.title || '',
       gallery: Array.isArray(data.gallery) ? data.gallery : [],
       details: Array.isArray(data.details) ? data.details : [],
-      description: (body || '').trim(),
+      description: (data.description != null ? String(data.description) : (body || '')).trim(),
     });
   }
   return projects;
@@ -279,8 +279,8 @@ function detailSection(p) {
   const loc = p.location ? `\n    <div class="loc">${escText(p.location)}</div>` : '';
   const rt = p.description ? `\n    <div class="rt"><p>${escText(p.description)}</p></div>` : '';
   const rows = p.gallery.map(galleryRow).join('\n');
-  const dls = (p.details || []).map(group =>
-    `    <dl>\n${group.map(f => `      <dt>${escText(f.label)}</dt><dd>${escText(f.value)}</dd>`).join('\n')}\n    </dl>`,
+  const dls = (p.details || []).map(g =>
+    `    <dl>\n${(g.entries || []).map(f => `      <dt>${escText(f.label)}</dt><dd>${escText(f.value)}</dd>`).join('\n')}\n    </dl>`,
   ).join('\n');
   return `<section class="projektseite" id="${p.id}">
   <a class="ps-back" href='#uebersicht'><span class="arrow">&larr;</span> Zurück zur Projekte-Übersicht</a>
@@ -362,7 +362,7 @@ ${list}
 }
 
 function genUeberMich(d) {
-  const bodyP = (d.body || []).map(p => `      <p>${escText(p)}</p>`).join('\n');
+  const bodyP = (d.body || []).map(p => `      <p>${escText(typeof p === 'string' ? p : (p && p.text) || '')}</p>`).join('\n');
   const facts = (d.facts || []).map(f => `      <div class="fact">
         <h4>${escText(f.title)}</h4>
         <p>${escText(f.text)}</p>

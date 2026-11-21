@@ -7,6 +7,7 @@ card_title: Allgemeinmedizinische Akutpraxis
 location: Köln
 thumb: /assets/img/praxis_int_01.jpg
 thumb_alt: Allgemeinmedizinische Akutpraxis
+description: Komplette Neuerschließung einer Fläche zur Erweiterung einer internistischen Praxis in Köln. Die lichte Erweiterung der Praxis hebt sich farbig und strukturell von ihrer Schwesternpraxis ab. Wesentliche Bestandteile der Planung sind neben der räumlichen Neuaufteilung auch der Möbelentwurf und die Gestaltung bis ins Detail sowie das Beleuchtungskonzept und die akustische Planung.
 gallery:
   - layout: full
     images:
@@ -31,11 +32,11 @@ gallery:
       - src: /assets/img/praxis_int_07.jpg
         alt: Sideboard, Detail
 details:
-  - - label: Ort
-      value: Köln
-    - label: Einbauten
-      value: Gutjahr
-    - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Ort
+        value: Köln
+      - label: Einbauten
+        value: Gutjahr
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Komplette Neuerschließung einer Fläche zur Erweiterung einer internistischen Praxis in Köln. Die lichte Erweiterung der Praxis hebt sich farbig und strukturell von ihrer Schwesternpraxis ab. Wesentliche Bestandteile der Planung sind neben der räumlichen Neuaufteilung auch der Möbelentwurf und die Gestaltung bis ins Detail sowie das Beleuchtungskonzept und die akustische Planung.

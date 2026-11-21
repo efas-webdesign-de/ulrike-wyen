@@ -7,6 +7,7 @@ card_title: Wohn & Esszimmer mit Kamin
 location: Bergisch Gladbach
 thumb: /assets/img/boogen_wz_01.jpg
 thumb_alt: Wohn & Esszimmer mit Kamin
+description: Bei der umfassenden Neugestaltung eines Wohnzimmers in Bergisch Gladbach wurde ein Gaskamin installiert und mit dem Heimkino in eine neue Schrankwand integriert. Auch der Essbereich erhielt ein neues Gesicht durch eine Wandvertäfelung und ein neues Beleuchtungskonzept. Das abgerundete Kopfwandstück mit integrierter Nische schafft einen Übergang zwischen Essbereich und Wohnzimmer.
 gallery:
   - layout: full
     images:
@@ -35,7 +36,7 @@ gallery:
       - src: /assets/img/boogen_wz_08.jpg
         alt: Ecklösung mit Rundung
 details:
-  - - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Bei der umfassenden Neugestaltung eines Wohnzimmers in Bergisch Gladbach wurde ein Gaskamin installiert und mit dem Heimkino in eine neue Schrankwand integriert. Auch der Essbereich erhielt ein neues Gesicht durch eine Wandvertäfelung und ein neues Beleuchtungskonzept. Das abgerundete Kopfwandstück mit integrierter Nische schafft einen Übergang zwischen Essbereich und Wohnzimmer.

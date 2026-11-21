@@ -7,6 +7,7 @@ card_title: Gastronomie & Kinderschminkecke
 location: Bergisch Gladbach
 thumb: /assets/img/cafe_gastro.jpg
 thumb_alt: Gastronomie & Kinderschminkecke
+description: "Zwei Umgestaltungen im selben Bergisch Gladbacher Indoor-Spielplatz: Mit Hilfe eines Gastronomie-Beraters wurden die funktionellen Abläufe und das Angebot des vorhandenen Restaurants neu konzipiert. Eine klar strukturierte Fläche ermöglicht mehr Orientierung und stimmige Abläufe, das farbliche Konzept aus Schwarz, Eichenholz und Bepflanzung ergänzt das Dschungelkonzept des Hauses. Mit geringen Eingriffen wurde zudem die angrenzende Kinderschminkecke neu gestaltet: Elemente von Theatergarderoben mit Bühne wurden mit demselben Dschungelkonzept des Betreibers vereint."
 gallery:
   - layout: full
     images:
@@ -47,15 +48,16 @@ gallery:
       - src: /assets/img/schmink_neu_03.jpg
         alt: Vorhang und Bepflanzung
 details:
-  - - label: Ort
-      value: Bergisch Gladbach
-  - - label: Entwurf
-      value: Ulrike Wyen
-    - label: Einbauten
-      value: Gutjahr
-    - label: Gastronomieberatung
-      value: Volker Scheid
-    - label: Fotos
-      value: Sebastian Meyer
+  - entries:
+      - label: Ort
+        value: Bergisch Gladbach
+  - entries:
+      - label: Entwurf
+        value: Ulrike Wyen
+      - label: Einbauten
+        value: Gutjahr
+      - label: Gastronomieberatung
+        value: Volker Scheid
+      - label: Fotos
+        value: Sebastian Meyer
 ---
-Zwei Umgestaltungen im selben Bergisch Gladbacher Indoor-Spielplatz: Mit Hilfe eines Gastronomie-Beraters wurden die funktionellen Abläufe und das Angebot des vorhandenen Restaurants neu konzipiert. Eine klar strukturierte Fläche ermöglicht mehr Orientierung und stimmige Abläufe, das farbliche Konzept aus Schwarz, Eichenholz und Bepflanzung ergänzt das Dschungelkonzept des Hauses. Mit geringen Eingriffen wurde zudem die angrenzende Kinderschminkecke neu gestaltet: Elemente von Theatergarderoben mit Bühne wurden mit demselben Dschungelkonzept des Betreibers vereint.

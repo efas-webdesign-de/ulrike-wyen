@@ -7,6 +7,7 @@ card_title: Private Küche
 location: Köln
 thumb: /assets/img/kueche_poggy.jpg
 thumb_alt: Küche Poggy
+description: In einem schlauchförmigen Raum sollte eine hochwertige Küche installiert werden, die dennoch einen Ort zum Verweilen darstellt. Die integrierte Sitzkoje mit Beleuchtung und Ladestation sowie ein schwenkbarer Tablartisch ermöglichen sowohl einen gemütlichen Imbiss als auch gemeinsames Kochen mit Gästen.
 gallery:
   - layout: full
     images:
@@ -35,13 +36,14 @@ gallery:
       - src: /assets/img/poggy_10.jpg
         alt: Bora-Drehknauf, Detail
 details:
-  - - label: Ort
-      value: Köln
-  - - label: Entwurf
-      value: Ulrike Wyen
-    - label: Einbauten
-      value: Bbene
-    - label: Fotos
-      value: Sebastian Meyer
+  - entries:
+      - label: Ort
+        value: Köln
+  - entries:
+      - label: Entwurf
+        value: Ulrike Wyen
+      - label: Einbauten
+        value: Bbene
+      - label: Fotos
+        value: Sebastian Meyer
 ---
-In einem schlauchförmigen Raum sollte eine hochwertige Küche installiert werden, die dennoch einen Ort zum Verweilen darstellt. Die integrierte Sitzkoje mit Beleuchtung und Ladestation sowie ein schwenkbarer Tablartisch ermöglichen sowohl einen gemütlichen Imbiss als auch gemeinsames Kochen mit Gästen.

@@ -7,6 +7,7 @@ card_title: Pop-up Store
 location: Köln
 thumb: /assets/img/buero_popup.jpg
 thumb_alt: Pop-up Store
+description: Eine zweigeschossige Architektur aus den 50er-Jahren bot den Rahmen für eine zeitlich befristete, kombinierte Büro- und Event-Fläche. Die offene Fläche im Erdgeschoss dient als Verkaufsfläche für Games & Vinyl-Platten und kann kurzfristig für Events wie Konzerte oder Shootings genutzt werden.
 gallery:
   - layout: full
     images:
@@ -23,11 +24,12 @@ gallery:
       - src: /assets/img/popup_03.jpg
         alt: Fensterfront
 details:
-  - - label: Ort
-      value: Köln
-  - - label: Entwurf
-      value: Ulrike Wyen
-    - label: Fotos
-      value: Sebastian Meyer
+  - entries:
+      - label: Ort
+        value: Köln
+  - entries:
+      - label: Entwurf
+        value: Ulrike Wyen
+      - label: Fotos
+        value: Sebastian Meyer
 ---
-Eine zweigeschossige Architektur aus den 50er-Jahren bot den Rahmen für eine zeitlich befristete, kombinierte Büro- und Event-Fläche. Die offene Fläche im Erdgeschoss dient als Verkaufsfläche für Games & Vinyl-Platten und kann kurzfristig für Events wie Konzerte oder Shootings genutzt werden.

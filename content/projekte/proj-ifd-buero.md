@@ -7,6 +7,7 @@ card_title: Neugestaltung einer Bürofläche
 location: Köln
 thumb: /assets/img/ifd_buero_01.jpg
 thumb_alt: Neugestaltung einer Bürofläche
+description: Umbau einer Fachberatungsstelle, die sich mit den Belangen von Menschen mit Behinderung rund um die Teilhabe am Arbeitsleben beschäftigt. Die Räume wurden neu aufgeteilt, sodass sie verschiedenen Nutzungen zur Verfügung stehen. Dabei hatten insbesondere die Aspekte Sehen und Hören einen besonderen Stellenwert. Eine klare Wegführung mit deutlichen Kontrasten fand ebenso Beachtung wie gestalterische Maßnahmen mit großen Vorhängen, um die akustische Situation und die Blendthematik an alle Bedürfnisse anpassen zu können.
 gallery:
   - layout: full
     images:
@@ -41,9 +42,9 @@ gallery:
       - src: /assets/img/ifd_buero_10.jpg
         alt: Flur mit schwarzen Türrahmen
 details:
-  - - label: Ort
-      value: Köln
-    - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Ort
+        value: Köln
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Umbau einer Fachberatungsstelle, die sich mit den Belangen von Menschen mit Behinderung rund um die Teilhabe am Arbeitsleben beschäftigt. Die Räume wurden neu aufgeteilt, sodass sie verschiedenen Nutzungen zur Verfügung stehen. Dabei hatten insbesondere die Aspekte Sehen und Hören einen besonderen Stellenwert. Eine klare Wegführung mit deutlichen Kontrasten fand ebenso Beachtung wie gestalterische Maßnahmen mit großen Vorhängen, um die akustische Situation und die Blendthematik an alle Bedürfnisse anpassen zu können.

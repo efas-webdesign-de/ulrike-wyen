@@ -7,6 +7,7 @@ card_title: Offene Wohnküche
 location: Köln
 thumb: /assets/img/kueche_wyen_01.jpg
 thumb_alt: Offene Wohnküche
+description: Die großzügige Küche mit angeschlossenem Essbereich wurde in Nussbaum, Naturstein und Feinsteinzeug gefertigt. Die klare Struktur der Fronten dient zugleich als Griffleiste, Steckdosen wurden bündig in der Wand integriert. Moderne integrierte Geräte wie Wasserfilter und -sprudler sowie die raumhohen Oberschränke geben der Küche eine optische Ruhe und machen sie zum Teil des Wohnraumes.
 gallery:
   - layout: full
     images:
@@ -37,7 +38,7 @@ gallery:
       - src: /assets/img/kueche_wyen_09.jpg
         alt: Steckdose in der Front
 details:
-  - - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Die großzügige Küche mit angeschlossenem Essbereich wurde in Nussbaum, Naturstein und Feinsteinzeug gefertigt. Die klare Struktur der Fronten dient zugleich als Griffleiste, Steckdosen wurden bündig in der Wand integriert. Moderne integrierte Geräte wie Wasserfilter und -sprudler sowie die raumhohen Oberschränke geben der Küche eine optische Ruhe und machen sie zum Teil des Wohnraumes.

@@ -7,6 +7,7 @@ card_title: Café Elefant
 location: Köln
 thumb: /assets/img/cafe_elefant_01.jpg
 thumb_alt: Café Elefant
+description: Ein Café in Köln mit langer Tradition erhielt eine neue Küche mit veränderten Arbeitsabläufen, wobei das originale Erscheinungsbild aber nicht geändert werden sollte. Technische Ergänzungen im Küchenbereich sowie sensible Erweiterungen und Renovierungen rundeten die Maßnahme ab.
 gallery:
   - layout: full
     images:
@@ -23,9 +24,9 @@ gallery:
       - src: /assets/img/cafe_elefant_04.jpg
         alt: Tischaufsteller mit Speisekarte
 details:
-  - - label: Ort
-      value: Köln
-    - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Ort
+        value: Köln
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Ein Café in Köln mit langer Tradition erhielt eine neue Küche mit veränderten Arbeitsabläufen, wobei das originale Erscheinungsbild aber nicht geändert werden sollte. Technische Ergänzungen im Küchenbereich sowie sensible Erweiterungen und Renovierungen rundeten die Maßnahme ab.

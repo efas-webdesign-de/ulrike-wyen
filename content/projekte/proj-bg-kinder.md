@@ -7,6 +7,7 @@ card_title: Zwei Kinderzimmer
 location: Bergisch Gladbach
 thumb: /assets/img/bg_kind_05.jpg
 thumb_alt: Kinderzimmer mit Hochbett und Spieletage
+description: Die Einrichtung der Spieletagen ermöglicht ideale Raumausnutzungen, trotz vieler Komplettverglasungen, und gibt den Heranwachsenden individuelle Nutzungs- und Gestaltungsmöglichkeiten. Die Wandvertäfelungen und abgesetzten Vorhänge schaffen einen Nestcharakter auf Kinderhöhe.
 gallery:
   - layout: half
     images:
@@ -33,9 +34,9 @@ gallery:
       - src: /assets/img/bg_kind_03.jpg
         alt: Gepolsterte Wand, Detail
 details:
-  - - label: Ort
-      value: Bergisch Gladbach
-    - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Ort
+        value: Bergisch Gladbach
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Die Einrichtung der Spieletagen ermöglicht ideale Raumausnutzungen, trotz vieler Komplettverglasungen, und gibt den Heranwachsenden individuelle Nutzungs- und Gestaltungsmöglichkeiten. Die Wandvertäfelungen und abgesetzten Vorhänge schaffen einen Nestcharakter auf Kinderhöhe.

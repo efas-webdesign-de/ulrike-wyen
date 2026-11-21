@@ -7,6 +7,7 @@ card_title: Loftetage mit Küche
 location: Köln
 thumb: /assets/img/tm_kueche_01.jpg
 thumb_alt: Loftetage mit Küche
+description: Die vorgegebene Raumstruktur wurde komplett aufgelöst und hat einer großzügigen Wohnküche Platz gemacht. Der Küchenblock bildet das Herzstück der Etage. Alle Funktionen wie auch Küchengeräte sind hinter den Schranktüren verborgen, sodass der Raum einen stärkeren Wohncharakter erhält. Eichenholz, zwei Grüntöne, organische Fliesenoberflächen und kontrastierendes Schwarz ergänzen das vorhandene Mobiliar mit den vielen Zimmerpflanzen.
 gallery:
   - layout: full
     images:
@@ -65,9 +66,9 @@ gallery:
       - src: /assets/img/tm_kueche_18.jpg
         alt: Fliesenspiegel, Detail
 details:
-  - - label: Ort
-      value: Köln
-    - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Ort
+        value: Köln
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Die vorgegebene Raumstruktur wurde komplett aufgelöst und hat einer großzügigen Wohnküche Platz gemacht. Der Küchenblock bildet das Herzstück der Etage. Alle Funktionen wie auch Küchengeräte sind hinter den Schranktüren verborgen, sodass der Raum einen stärkeren Wohncharakter erhält. Eichenholz, zwei Grüntöne, organische Fliesenoberflächen und kontrastierendes Schwarz ergänzen das vorhandene Mobiliar mit den vielen Zimmerpflanzen.

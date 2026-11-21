@@ -7,6 +7,7 @@ card_title: Maisonette im Fabrikareal
 location: Köln
 thumb: /assets/img/kueche_clouth.jpg
 thumb_alt: Maisonette im Fabrikareal
+description: In einem alten Fabrikareal wurden neue Wohngebäude errichtet. Alle Bereiche dieser Maisonette-Wohnung - von der Küche über Flur, Bäder und Schlafzimmer bis zum Arbeitszimmer - wurden ganzheitlich auf den genius loci und die individuellen Bedürfnisse der Bauherren abgestimmt. Ein rückenschonender Boden aus gummiartiger, fugenloser Masse bewahrt den Industriecharakter durch die ganze Wohnung. Die großzügige Küche mit angeschlossenem Essbereich wurde in Nussbaum, Naturstein und Feinsteinzeug gefertigt, die klare Struktur der Fronten ist zugleich Griffleiste. Schlafzimmer, Bäder, WC und Arbeitszimmer sind über mutige Tapeten - Weltkarte, Fornasetti, floral - und eigene Farbkonzepte individuell gestaltet.
 gallery:
   - layout: full
     images:
@@ -41,13 +42,14 @@ gallery:
       - src: /assets/img/clouth_wc20.jpg
         alt: WC, Fornasetti-Tapete
 details:
-  - - label: Ort
-      value: Köln
-  - - label: Entwurf
-      value: Ulrike Wyen
-    - label: Einbauten
-      value: Bbene
-    - label: Fotos
-      value: Sebastian Meyer
+  - entries:
+      - label: Ort
+        value: Köln
+  - entries:
+      - label: Entwurf
+        value: Ulrike Wyen
+      - label: Einbauten
+        value: Bbene
+      - label: Fotos
+        value: Sebastian Meyer
 ---
-In einem alten Fabrikareal wurden neue Wohngebäude errichtet. Alle Bereiche dieser Maisonette-Wohnung - von der Küche über Flur, Bäder und Schlafzimmer bis zum Arbeitszimmer - wurden ganzheitlich auf den genius loci und die individuellen Bedürfnisse der Bauherren abgestimmt. Ein rückenschonender Boden aus gummiartiger, fugenloser Masse bewahrt den Industriecharakter durch die ganze Wohnung. Die großzügige Küche mit angeschlossenem Essbereich wurde in Nussbaum, Naturstein und Feinsteinzeug gefertigt, die klare Struktur der Fronten ist zugleich Griffleiste. Schlafzimmer, Bäder, WC und Arbeitszimmer sind über mutige Tapeten - Weltkarte, Fornasetti, floral - und eigene Farbkonzepte individuell gestaltet.

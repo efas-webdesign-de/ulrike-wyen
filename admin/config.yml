@@ -1,8 +1,7 @@
 # Sveltia-CMS-Konfiguration fuer die Ulrike-Wyen-Seite.
-# Aktuell: Blog. Projekte / FAQ / Ueber-mich kommen als weitere Collections dazu.
 #
 # Lokaler Test (ohne Login/GitHub): Seite lokal servieren, im Chrome/Edge/Brave
-#   http://localhost:<port>/admin/index.html oeffnen -> "Work with Local Repository"
+#   http://localhost:<port>/admin/index.html oeffnen -> "Mit lokalem Repository arbeiten"
 #   -> den Projektordner ulrike-wyen auswaehlen. Sveltia schreibt dann in content/.
 
 backend:
@@ -10,14 +9,69 @@ backend:
   repo: efas-webdesign-de/ulrike-wyen
   branch: main
 
-# Wohin hochgeladene Bilder gespeichert werden (Repo-Pfad) und unter welcher URL sie liegen.
-media_folder: assets/blog
-public_folder: /assets/blog
+media_folder: assets/img
+public_folder: /assets/img
 
-# Deutsche Oberflaeche
 locale: de
 
 collections:
+  # ---------------- Projekte ----------------
+  - name: projekte
+    label: Projekte
+    label_singular: Projekt
+    description: Alle Projekte. Reihenfolge und Kategorie steuern, wo das Projekt in der Uebersicht erscheint.
+    folder: content/projekte
+    create: true
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: "{{group}} · {{title}}"
+    sortable_fields: [group, order, title]
+    fields:
+      - { label: Interne ID, name: id, widget: hidden }
+      - { label: Titel, name: title, widget: string }
+      - { label: "Kürzerer Titel für die Übersichtskarte (nur falls nötig)", name: card_title, widget: string, required: false }
+      - { label: Kategorie, name: group, widget: select, options: [Privat, Praxen, Gewerblich] }
+      - { label: "Reihenfolge in der Kategorie (kleiner = weiter vorne)", name: order, widget: number, value_type: int, default: 1 }
+      - { label: Ort, name: location, widget: string, required: false }
+      - { label: Beschreibung, name: description, widget: text, required: false }
+      - { label: "Vorschaubild (Übersichtskarte)", name: thumb, widget: image }
+      - { label: "Bildbeschreibung Vorschaubild", name: thumb_alt, widget: string, required: false }
+      - label: Bildergalerie
+        name: gallery
+        widget: list
+        label_singular: Bildreihe
+        summary: "Reihe: {{layout}}"
+        fields:
+          - label: Breite
+            name: layout
+            widget: select
+            default: full
+            options:
+              - { label: "ganze Breite", value: full }
+              - { label: "halbe Breite (zwei nebeneinander)", value: half }
+          - label: Bilder
+            name: images
+            widget: list
+            summary: "{{alt}}"
+            fields:
+              - { label: Bild, name: src, widget: image }
+              - { label: Bildbeschreibung, name: alt, widget: string, required: false }
+              - { label: "Technische Zeichnung (Plan)?", name: plan, widget: boolean, required: false, default: false }
+      - label: "Angaben (unter der Galerie, bis zu 2 Spalten)"
+        name: details
+        widget: list
+        label_singular: Spalte
+        fields:
+          - label: Einträge
+            name: entries
+            widget: list
+            summary: "{{label}}: {{value}}"
+            fields:
+              - { label: Bezeichnung, name: label, widget: string }
+              - { label: Wert, name: value, widget: string }
+
+  # ---------------- Blog ----------------
   - name: blog
     label: Blog
     label_singular: Beitrag
@@ -35,3 +89,47 @@ collections:
       - { label: Kurztext (für die Übersicht), name: excerpt, widget: text, required: false }
       - { label: "Entwurf (nicht veröffentlichen)", name: draft, widget: boolean, default: false }
       - { label: Text, name: body, widget: markdown }
+
+  # ---------------- Seiten-Inhalte ----------------
+  - name: inhalte
+    label: Seiten-Inhalte
+    description: Feste Bereiche der Startseite.
+    files:
+      - name: faq
+        label: FAQ (Fragen & Antworten)
+        file: content/faq.yml
+        fields:
+          - label: Fragen
+            name: items
+            widget: list
+            summary: "{{question}}"
+            fields:
+              - { label: Frage, name: question, widget: string }
+              - { label: Antwort, name: answer, widget: text }
+      - name: ueber-mich
+        label: Über mich
+        file: content/ueber-mich.yml
+        fields:
+          - { label: Überschrift, name: headline, widget: text }
+          - { label: Einleitung, name: lead, widget: text }
+          - label: "Fließtext (einzelne Absätze)"
+            name: body
+            widget: list
+            field: { label: Absatz, name: text, widget: text }
+          - { label: Portraitbild, name: portrait, widget: image }
+          - { label: Bildbeschreibung Portrait, name: portrait_alt, widget: string, required: false }
+          - label: Fakten
+            name: facts
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - { label: Titel, name: title, widget: string }
+              - { label: Text, name: text, widget: string }
+          - { label: "Überschrift Lebenslauf", name: vita_heading, widget: string }
+          - label: "Lebenslauf-Einträge"
+            name: vita
+            widget: list
+            summary: "{{year}}"
+            fields:
+              - { label: "Jahr / Zeitraum", name: year, widget: string }
+              - { label: Beschreibung, name: desc, widget: text }

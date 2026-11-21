@@ -7,6 +7,7 @@ card_title: Umnutzung eines Supermarktes
 location: Neuss
 thumb: /assets/img/super_neuss_fassade.png
 thumb_alt: Umnutzung eines Supermarktes, Neuss
+description: Machbarkeitsstudie zur Umnutzung einer Supermarktfläche in Wohnen mit Betreuung in 50-m²-Einheiten, alternativ Praxisgemeinschaft mit zentraler Anmeldung und interdisziplinären Praxen. Diese Studie diente der Vermarktung der noch nicht umgebauten Mietfläche an potenzielle Interessenten. Beim letztendlichen Umbau zu einer Fläche für Individualpraxen wurde auch die Fassade den neuen Zwecken angepasst und umgestaltet.
 gallery:
   - layout: full
     images:
@@ -27,11 +28,11 @@ gallery:
         alt: Realisierter Grundriss mit Individualpraxen
         plan: true
 details:
-  - - label: Ort
-      value: Neuss
-    - label: Art
-      value: Machbarkeitsstudie, Umnutzung
-    - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Ort
+        value: Neuss
+      - label: Art
+        value: Machbarkeitsstudie, Umnutzung
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Machbarkeitsstudie zur Umnutzung einer Supermarktfläche in Wohnen mit Betreuung in 50-m²-Einheiten, alternativ Praxisgemeinschaft mit zentraler Anmeldung und interdisziplinären Praxen. Diese Studie diente der Vermarktung der noch nicht umgebauten Mietfläche an potenzielle Interessenten. Beim letztendlichen Umbau zu einer Fläche für Individualpraxen wurde auch die Fassade den neuen Zwecken angepasst und umgestaltet.

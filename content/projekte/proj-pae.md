@@ -7,6 +7,7 @@ card_title: Internistische Gemeinschaftspraxis
 location: Köln-Ebertplatz
 thumb: /assets/img/arzt_pae.jpg
 thumb_alt: Internistische Gemeinschaftspraxis
+description: Maßgeschneiderte Gestaltung der neuen Räumlichkeiten für eine Praxisgemeinschaft in Köln - eine innenarchitektonische Planung, die den unterschiedlichen Ansprüchen der Ärztinnen und Ärzte, Disziplinen und Patienten entspricht. Dafür wurde das Mobiliar speziell entworfen und alle Räume verschiedenfarbig gestaltet.
 gallery:
   - layout: full
     images:
@@ -57,9 +58,10 @@ gallery:
       - src: /assets/img/pae_10.jpg
         alt: Praxislogo
 details:
-  - - label: Ort
-      value: Köln-Ebertplatz
-  - - label: Entwurf
-      value: Ulrike Wyen
+  - entries:
+      - label: Ort
+        value: Köln-Ebertplatz
+  - entries:
+      - label: Entwurf
+        value: Ulrike Wyen
 ---
-Maßgeschneiderte Gestaltung der neuen Räumlichkeiten für eine Praxisgemeinschaft in Köln - eine innenarchitektonische Planung, die den unterschiedlichen Ansprüchen der Ärztinnen und Ärzte, Disziplinen und Patienten entspricht. Dafür wurde das Mobiliar speziell entworfen und alle Räume verschiedenfarbig gestaltet.
