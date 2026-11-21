@@ -392,8 +392,44 @@ ${vita}
 `;
 }
 
+const RAIL_PREV = `      <button class="rail-nav prev" type="button" aria-label="Zurück">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8 10 12.5"/></svg>
+      </button>`;
+const RAIL_NEXT = `      <button class="rail-nav next" type="button" aria-label="Weiter">
+        <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>
+      </button>`;
+
+function homeCard(p, idx) {
+  const lazy = idx > 3 ? ' loading="lazy"' : '';
+  return `        <a class='proj-card' href='/projekte#${p.id}'>
+      <div class="thumb"><img src="${relSrc(p.thumb)}" alt="${escAttr(p.thumb_alt)}"${dimAttr(p.thumb)} decoding="async"${lazy}></div>
+      <div class="meta"><h3>${escText(p.card_title)}</h3></div></a>`;
+}
+
+function genHomeGroups(projectList) {
+  let idx = 0;
+  return GROUP_ORDER.map(group => {
+    const items = projectList.filter(p => p.group === group).sort((a, b) => a.order - b.order);
+    const cards = items.map(p => homeCard(p, ++idx)).join('\n');
+    return `    <div class="proj-group">
+      <div class="group-label">${group}</div>
+      <div class="proj-rail">
+${RAIL_PREV}
+${RAIL_NEXT}
+        <div class="rail-track">
+${cards}
+        </div>
+      </div>
+    </div>`;
+  }).join('\n\n');
+}
+
 function buildIndex() {
   let html = readFileSync(join(root, 'index.html'), 'utf8');
+
+  if (projects && projects.length) {
+    html = html.replace(/(<div class="section-head">[\s\S]*?<\/div>\n)[\s\S]*?(\n  <div class="projekte-more">)/, (m, a, b) => a + '\n' + genHomeGroups(projects) + '\n' + b);
+  }
 
   const faqData = loadYmlFile('faq.yml');
   const faq = faqData && Array.isArray(faqData.items) ? faqData.items : [];
@@ -404,10 +440,44 @@ function buildIndex() {
   const um = loadYmlFile('ueber-mich.yml');
   if (um) {
     html = html.replace(/(<section class="ueber-mich-voll"[^>]*>)[\s\S]*?(<\/section>)/, (m, a, b) => a + genUeberMich(um) + b);
+    const teaserLines = um.teaser ? String(um.teaser).split('\n').map(l => l.trim()).filter(Boolean) : [];
+    if (teaserLines.length) {
+      html = html.replace(/(<div class="about-text">\s*<span class="eyebrow">Über mich<\/span>\s*)<p>[\s\S]*?<\/p>/, (m, a) => a + `<p>${teaserLines.map(escText).join('<br>')}</p>`);
+    }
   }
 
   writeFileSync(join(dist, 'index.html'), html);
 }
 buildIndex();
 
-console.log(`Build fertig: Passthrough + Blog (${posts.length}) + Projekte (${projects.length}) + Startseite.`);
+/* ---------------- 5) Impressum / Datenschutz: Kontaktdaten ---------------- */
+
+function buildLegal() {
+  const s = loadYmlFile('einstellungen.yml');
+  if (!s) return;
+  const firma = escText(s.firma || '');
+  const name = escText(s.name || '');
+  const adr = (s.adresse || []).map(l => escText(l));
+  const tel = escText(s.telefon || '');
+  const mob = escText(s.mobil || '');
+  const emailEsc = escText(s.email || '');
+  const emailAttr = escAttr(s.email || '');
+  const ust = String(s.ust_id || '').trim();
+
+  const addressP = `<p>${[firma, name, ...adr].join('<br>\n    ')}</p>`;
+  const kontaktP = `<p>Telefon: ${tel}<br>\n    Mobil: ${mob}<br>\n    E-Mail: <a href="mailto:${emailAttr}">${emailEsc}</a></p>`;
+  const dsP = `<p>${[firma, name, ...adr].join('<br>\n    ')}<br>\n    Telefon: ${tel}<br>\n    E-Mail: <a href="mailto:${emailAttr}">${emailEsc}</a></p>`;
+
+  let imp = readFileSync(join(root, 'impressum.html'), 'utf8');
+  imp = imp.replace(/(<h2>Angaben gemäß § 5 TMG<\/h2>\s*)<p>[\s\S]*?<\/p>/, (m, a) => a + addressP);
+  imp = imp.replace(/(<h2>Kontakt<\/h2>\s*)<p>[\s\S]*?<\/p>/, (m, a) => a + kontaktP);
+  if (ust) imp = imp.replace('[USt-IdNr. eintragen]', escText(ust));
+  writeFileSync(join(dist, 'impressum.html'), imp);
+
+  let ds = readFileSync(join(root, 'datenschutz.html'), 'utf8');
+  ds = ds.replace(/(Verantwortlich für die Datenverarbeitung auf dieser Website ist:<\/p>\s*)<p>[\s\S]*?<\/p>/, (m, a) => a + dsP);
+  writeFileSync(join(dist, 'datenschutz.html'), ds);
+}
+buildLegal();
+
+console.log(`Build fertig: Passthrough + Blog (${posts.length}) + Projekte (${projects.length}) + Startseite + Rechtliches.`);

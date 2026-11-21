@@ -110,6 +110,7 @@ collections:
         label: Über mich
         file: content/ueber-mich.yml
         fields:
+          - { label: "Kurz-Intro (oben auf der Startseite; Zeilenumbruch = neue Zeile)", name: teaser, widget: text }
           - { label: Überschrift, name: headline, widget: text }
           - { label: Einleitung, name: lead, widget: text }
           - label: "Fließtext (einzelne Absätze)"
@@ -133,3 +134,14 @@ collections:
             fields:
               - { label: "Jahr / Zeitraum", name: year, widget: string }
               - { label: Beschreibung, name: desc, widget: text }
+      - name: einstellungen
+        label: Impressum / Kontaktdaten
+        file: content/einstellungen.yml
+        fields:
+          - { label: "Firma / Bezeichnung", name: firma, widget: string }
+          - { label: Name, name: name, widget: string }
+          - { label: "Anschrift (eine Zeile pro Eintrag)", name: adresse, widget: list, field: { label: Zeile, name: zeile, widget: string } }
+          - { label: Telefon, name: telefon, widget: string, required: false }
+          - { label: Mobil, name: mobil, widget: string, required: false }
+          - { label: E-Mail, name: email, widget: string }
+          - { label: "USt-IdNr. (falls vorhanden, sonst leer lassen)", name: ust_id, widget: string, required: false }
