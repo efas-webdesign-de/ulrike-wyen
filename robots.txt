@@ -1,5 +1,4 @@
-# TESTPHASE - beim echten Livegang ersetzen durch:
-# User-agent: *
-# Allow: /
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://wyen.net/sitemap.xml
