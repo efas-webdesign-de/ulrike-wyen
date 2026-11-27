@@ -6,7 +6,7 @@
 
 backend:
   name: github
-  repo: efas-webdesign-de/ulrike-wyen
+  repo: UlrikeWyen/ulrike-wyen
   branch: main
 
 media_folder: assets/img
